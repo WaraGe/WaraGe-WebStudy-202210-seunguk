@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이퍼링크01</title>
+</head>
+
+<body>
+    <a href="주소 또는 파일명" target="">이미지 또는 글자</a>
+
+    <!-- 
+        [href] (경로)
+        ex)http://naver.com
+        ex)http://naver.com/파일명
+        파일명.html
+        폴더명/파일명.html
+
+        절대경로(고유한 경로)  /  상대경로(문서를 기준으로 경로)
+        
+        // 같은 폴더 파일로 이동시 경로 설정
+        ./파일명.html
+
+        // 특정폴더안에 파일로 이동시 경로 설정
+        ./폴더명/파일명.html
+
+        // 상위폴더에 있는 파일로 이동시 경로 설정
+        ../폴더명 (../한번에 상위폴더 한번 이동)
+
+        [target]
+        _blank(_new) => 새로운 브라우저에서 열림
+        _self => 현재 브라우저에서 열림
+        ------요즘 잘 안씀------
+        _top => 최상위 프레임
+        _parent => 부모 브라우저
+     -->
+     <h2>하이퍼링크01   </h2>
+
+     <img src="images/image.jpg" alt="">
+     <img src="1018-1/images/image.jpg" alt="">
+
+
+     <a href="./하이퍼링크03.html" target="_self">하이퍼링크03가기</a>
+     <!--
+        상대경로 : images/image.jpg
+        절대경로 : 1018-1/images/image.jpg
+       -->
+</body>
+
+</html>

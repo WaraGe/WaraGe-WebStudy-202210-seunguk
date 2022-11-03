@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일시트(기본)</title>
+    <style>
+        /* 전체 선택자 : 기본값(초기값)을 선언할때 사용 */
+        *{color: blue;}
+
+        /* 태그 선택자 : 선택자가 태그명, 특정태그에 스타일을 선언 */
+        h1{
+            font-family: '맑은고딕';
+            font-size: 50px;
+            color: skyblue; /*#000000과 같이 동일번호 6개이면 #000으로 줄여서 선언가능*/
+        }
+        p{
+            font-family: '바탕체';
+            font-size: 60px;
+            color: violet;
+        }
+        h3{
+            font-size: 30px;
+            color: aquamarine;
+        }
+        span{
+            font-family: 'd2coding';
+            font-size: 20px;
+            color: blueviolet;
+        }
+        a{
+            font-family: '굴림';
+            font-size: 15px;
+            color: red;
+        }
+        /* 클래스(class) 선택자 : 특정태그나 다수의 특정태그에 스타일을 적용 */
+        .web{
+            font-size: 100px;
+            font-weight: 900; /*100~900  100단위로 사용가능(9단계)*/
+            color: aqua;
+        }
+        /* id 선택자 : 하나의 태그에게만 스타일 선언 */
+        #web02{color: rebeccapurple;}
+        /* 그룹 선택자 */
+        h1, h3, #web02{
+                text-decoration: underline;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>코리아 아이티 아카데미</h1>
+    <h3>부산광역시 부산진구 전포동</h3>
+    <p class="web">웹 디자인</p>
+    <p id="web02">웹 퍼블리셔</p>
+    <p>프론트 엔드 개발자</p>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <a href="#">정보처리</a>
+</body>
+</html>
