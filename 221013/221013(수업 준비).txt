@@ -1,0 +1,17 @@
+김순조 강사
+
+https://cafe.daum.net/gomaci
+성명(it2210)
+gomaic@hanmail.net
+
+1 htmls/css
+2 반응형 ,javascript기본(함수)
+3 jquery(), es6 문법, 바닐라스크립트
+4 node.js -> 백엔드 서버개념
+
+
+[SPA] [MVC]
+5 react
+dom / 가상dom
+
+
