@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            margin: 100px;
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+        }
+        .box01 {
+            transform: translate(500px, 300px);
+        }
+        .box02 {
+            /* translateZ, translate3d 값은 재대로 값이 안들어감 */
+            transform: translateX(-200px);
+        }
+        .box03 {
+            /* 1이 100% */
+            transform: scale(2);
+        }
+        .box03-1 {
+            /* X=가로방향만 1.5배 =  1이 100% */
+            transform: scaleX(1.5);
+        }
+        /* 시계방향으로 45도 */
+        .box04 {
+            transform: rotate(45deg);
+        }
+        /* 가로방향 */
+        .box05 {
+            transform: skew(45deg, 0);
+        }
+        /* 세로방향 */
+        .box05-1 {
+            transform: skew(0, 45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box01">box01</div>
+    <div class="box02">box02</div>
+    <div class="box03">box03</div>
+    <div class="box03-1">box03-1</div>
+    <div class="box04">box04</div>
+    <div class="box05">box05</div>
+    <div class="box05-1">box05-1</div>
+</body>
+
+</html>

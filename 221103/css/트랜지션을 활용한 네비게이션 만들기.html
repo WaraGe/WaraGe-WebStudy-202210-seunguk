@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            width: 500px;
+            height: 30px;
+            border: 1px solid #000;
+        }
+        .nav a {
+            text-decoration: none;
+        }
+        .nav > li {
+            float: left;
+            width: 20%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            /* 메뉴바 밑에서 실행이 안될때 */
+            overflow: hidden;
+        }
+        .nav > li:hover {
+            background-color: aquamarine;
+            transition: 1s;
+            /* li에 마우스가 올라올때 다시 나타나게 하기 위해서 visible */
+            overflow: visible;
+        }
+        .nav > li:hover > a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .nav .sub {
+            border: 1px solid #ccc;;
+            /* display: none; */
+            opacity: 0;
+        }
+        .nav .sub li {
+            border-bottom: 1px solid #ccc;
+        }
+        .nav .sub li:hover {
+            background-color: blueviolet;
+            transition: 0.7s;
+        }
+        .nav > li:hover .sub {
+            /* display: block; */
+            /* border: 1px solid #ccc; */
+            opacity: 1;
+            transform: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

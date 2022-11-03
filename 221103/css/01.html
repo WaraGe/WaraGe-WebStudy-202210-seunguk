@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            margin: 100px;
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+            transition-duration: 1s;
+        }
+        .box01:hover {
+            width: 500px;
+            transition-duration: 1s;
+        }
+        .box02-1 {
+            margin: 0;
+        }
+        .box02:hover .box02-1 {
+            transform: rotate(360deg);
+            transition-delay: 0.3s;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+        }
+        .box03:hover + .box04 {
+            /* transform: translate(1000px, 0); */
+            transform: translate(1000px, 0) rotate(360deg);
+            transform: 2s ease-in-out;
+            font-size: 200px;
+        }
+        /* 멀리 선언할때는 물결로 표시 */
+        .box01-1:hover ~ .box01-2 {
+            transform: translate(500px, 0) rotate(360deg);
+            transition: 7s ease-in-out;
+            transform-origin: 0 0 ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box01">box01</div>
+    <div class="box01-1">box01-1</div>
+
+    <div class="box02">
+        <div class="box02-1">box2-1</div>
+    </div>
+
+    <!-- box03이 box04를 움직이게 할수있음 -->
+    <div class="box03">box03</div> 
+
+    <div class="box04">box04</div>
+    <div class="box01-2">box01-2</div>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul, li {
+            list-style: none;
+        }
+        .nav {
+            width: 500px;
+            height: 30px;
+            border: 1px solid #000;
+        }
+        .nav > li {
+            float: left;
+            width: 20%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            overflow: hidden;
+        }
+        .nav a {
+            text-decoration: none;
+        }
+        .nav > li:hover {
+            overflow: visible;
+            transition: 1s;
+        }
+
+        .nav > li:hover:nth-child(1){
+            background-color: red;
+        }
+        .nav > li:hover:nth-child(2){
+            background-color: orange;
+        }
+        .nav > li:hover:nth-child(3){
+            background-color: yellow;
+        }
+        .nav > li:hover:nth-child(4){
+            background-color: green;
+        }
+        .nav > li:hover:nth-child(5){
+            background-color: blue;
+        }
+        .nav .sub li:hover:nth-child(1) {
+            background-color: navy;
+        }
+        .nav .sub li:hover:nth-child(2) {
+            background-color: purple;
+        }
+        .nav .sub li:hover:nth-child(3) {
+            background-color: crimson;
+        }
+        .nav .sub li:hover:nth-child(4) {
+            background-color: darkgray;
+        }
+        .nav .sub li:hover:nth-child(5) {
+            background-color: thistle;
+        }
+
+        .nav > li > a > li{
+            border: 1px solid #000;
+        }
+        .nav .sub li:hover {
+            transition: 1s;
+        }
+        .nav .sub {
+            border: 1px solid #000;;
+            /* display: none; */
+        }
+        .nav .sub li {
+            border-bottom: 1px solid #000;
+        }
+        .nav .sub li:last-child {
+            border-bottom: 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

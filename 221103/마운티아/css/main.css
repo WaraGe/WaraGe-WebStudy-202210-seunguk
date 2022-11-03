@@ -1,0 +1,482 @@
+#wrap {
+    width: 100%;
+}
+
+/* 상단부분 */
+#header {
+    width: 100%;
+    height: 165px;
+}
+#header_in  {
+    margin: 0 auto;
+    width: 1000px;
+    height: 119px;
+}
+#header_in .logo {
+    padding-top: 50px;
+    box-sizing: border-box;
+    float: left;
+    width: 230px;
+    height: 115px;
+}
+#header_in .menu {
+    float: right;
+    width: 670px;
+    height: 115px;
+}
+/* ./infomn */
+#header_in .infomn {
+    float: left;
+    margin: 10px 0 0 400px ;
+}
+#header_in .infomn li {
+    float: left;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #333;
+    line-height: 11px;
+}
+#header_in .infomn li:last-child {
+    margin-right: 0px;
+    padding-right: 0px;
+    border-right: 0px;
+}
+#header_in .infomn a {
+    font-size: 11px;
+    color: rgb(38, 38, 38);
+}
+
+
+#header_in .q_mn {
+    float: left;
+    margin: 25px 0 0 70px;
+}
+#header_in .q_mn li {
+    float: left;
+}
+/* 글자 뒤에 특수문자 찍는법 */
+#header_in .q_mn li:after {
+    content: "·";
+    font-size: 20px;
+    padding: 0 10px;
+    line-height: 16px;
+}
+/* after값을 주고, 마지막 값을 주는 방법 */
+#header_in .q_mn li:last-child::after {
+    content: " ";
+    font-size: 20px;
+    padding: 0px;
+    line-height: 0px;
+}
+#header_in .q_mn a {
+    font-size: 16px;
+}
+
+#header_in .input {
+    float: left;
+    margin: 22px 0 0 10px;
+    width: 260px;
+    height: 25px;
+    background-color: aliceblue;
+    border: 1px solid #ccc;
+}
+#header_in .input span {
+    float: left;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 25px;
+}
+#header_in .input a {
+    float: right;
+}
+
+
+/* 네비 바 */
+#nav {
+    width: 100%;
+    height: 46px;
+    /* 반복금지 no-repeat 가로:중앙50% 세로:0 */
+    background: url(../images/nav_area.jpg) no-repeat 50% 0;
+}
+#nav ul {
+    margin: 0 auto;
+    width: 1010px;
+}
+#nav ul li {
+    float: left;
+}
+
+/* 메인이미지 */
+#main_img {
+    width: 100%;
+    height: 465px;
+    background: url(../images/main_img.jpg) no-repeat 50% 0;
+}
+
+/* 콘텐츠 */
+#contents {
+    width: 100%;
+    padding-top: 45px;
+    /* 패딩값줄때 크기가 정해져있지 않아서 box-sizing값을 주지 않아도 무방 */
+    padding-bottom: 75px;
+}
+#item {
+    margin: 0 auto;
+    width: 1000px;
+    height: 260px;
+}
+#item_h {
+    float: left;
+    width: 180px;
+    height: 260px;
+}
+#item_h .ttl {
+    padding: 20px 0;
+    font-size: 28px;
+    border-top: 2px solid #555;
+    border-bottom: 2px solid #555;
+}
+#item_h .menu {
+    margin-top: 25px;
+}
+#item_h .menu li {
+    margin-bottom: 10px;
+}
+#item_h .menu li a {
+    font-size: 16px;
+    color: #555;
+}
+/* hover을 사용하면 마우스를 댔을때 색상을 변경가능함 */
+#item_h .menu li:hover a {
+    color: orange;
+    text-decoration: underline;
+}
+#item_h .menu li:hover::after {
+    font-size: 16px;
+    color: orange;
+    content: "  >";
+}
+
+
+
+#item_b {
+    float: right;
+    width: 792px;
+    height: 260px;
+}
+#item_b li {
+    margin-right: 10px;
+    float: left;
+    width: 188px;
+    height: 260px;
+    border: 1px solid #ccc;
+}
+#item_b li:last-child {
+    margin-right: 0px;
+}
+#item_b li img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+#item_b li h5 {
+    padding: 10px 0 0 10px;
+    font-size: 16px;
+}
+#item_b li p {
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+
+#banner {
+    margin: 0 auto;
+    margin-top: 45px;
+    width: 1000px;
+    height: 280px;
+}
+/* 320 320 320 = 960    1000-960 = 40 / 2 = 20 */
+#banner > a {
+    /* a태그는 약간의 여백이 있어서 float: left값을 줌 */
+    float: left;
+    margin-right: 18px;
+}
+#banner > a:last-child {
+    margin-right: 0px;
+}
+
+#movie {
+    position: relative;
+    margin-top: 45px;
+    width: 100%;
+    height: 300px;
+    background: url(../images/movie.png);
+}
+#movie a.btn01 {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    padding: 10px 20px;
+    font-size: 20px; 
+    color: #fff;
+    border: 1px solid #fff;
+}
+#movie a.btn02 {
+    margin: 0 auto;
+    /* display block, 가로값을 주면 margin값을 통해서 중간으로 정렬가능 */
+    display: block;
+    width: 170px;
+    height: 40px;
+    text-align: left; 
+    line-height: 35px;
+    font-size: 14px; 
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid #fff;
+}
+#movie a.btn02:hover a{
+    text-decoration: underline;
+}
+#movie a.btn02:hover:after {
+    float: right;
+    margin-right: 20px;
+    content: ">";
+}
+
+#style {
+    margin: 0 auto;
+    margin-top: 45px;
+    width: 1000px;
+    height: 260px;
+
+}
+#style_h {
+    float: left;
+    width: 190px;
+    height: 260px;
+    background-color: aqua;
+}
+#style_b {
+    float: left;
+    width: 800px;
+    height: 260px;
+
+}
+#style_b figure {
+    float: left;
+    width: 190px;
+    height: 260px;
+    border: 1px solid solid #ccc;
+    box-sizing: border-box;
+    margin-right: 13.3px;
+}
+#style_b figure:last-child {
+    margin-right: 0;
+}
+#style_b figure img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+#style_b figcaption {
+    padding: 10px;
+}
+#style_b h4 {
+    font-size: 16px;
+}
+#style_b p {
+    font-size: 12px;
+}
+
+
+#go_btns {
+    margin: 0 auto;
+    margin-top: 45px;
+    width: 1000px;
+    height: 395px;
+}
+#go_btns .group {
+    float: left;
+    width: 492px;
+    height: 395px;
+}
+#go_btns .group a:last-child {
+    display: block;
+    margin-top: 15px;
+    height: 189px;
+}
+#go_btns  > a {
+    margin-left: 15px;
+    float: right;
+}
+
+
+/* 하단부분 */
+#footer {
+    width: 100%;
+
+}
+#footer .group {
+    width: 100%;
+    height: 160px;
+    /* repeat-x 가로값으로 늘리기 */
+    background: url(../images/footer_top_bg.jpg) repeat-x 0 0;
+}
+#footer .banner_box {
+    margin: 0 auto;
+    width: 1000px;
+    height: 110px;
+}
+#footer .banner_box > img {
+    float: left;
+}
+#footer .notice {
+    margin: 0 auto;
+    width: 1000px;
+    height: 50px;
+}
+#footer .notice .ttl, #footer .notice .txt {
+    float: left;
+    font-size: 13px;
+    color: #fff;
+    margin-right: 30px;
+    line-height: 50px;
+}
+#footer .notice .date {
+    float: right;
+    margin-right: 20px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+
+#f_top {
+    width: 100%;
+    height: 290px;
+    
+}
+#f_top > div {
+    margin: 0 auto;
+    width: 1000px;
+    height: 290px;
+    background-color: white;
+    padding-top: 20px;
+    box-sizing: border-box; /*padding 값을 줬기때문에*/
+}
+#f_top .mainmn{
+    margin-left: 11px;
+}
+#f_top .mainmn > li {
+    float: left;
+    margin-right: 50px;
+    text-align: left;
+}
+#f_top .mainmn > li:last-child {
+    margin-right: 0;
+}
+#f_top .mainmn > li > h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+#f_top .submn li {
+    /* margin-bottom: 5px; */
+}
+#f_top .submn li a {
+    font-size: 14px;
+    color: #333;
+}
+
+#f_top .callcenter {
+    float: right;
+    width: 240px;
+}
+#f_top .callcenter .ttl {
+    border-bottom: 1px solid #555;
+    font-size: 30px;
+    font-weight: 800;
+    color: #000;
+    text-align: center;
+    padding: 0px 0 10px;
+    margin-bottom: 15px;
+}
+#f_top .callcenter .s_ttl {
+    font-size: 14px;
+    color: #000;
+}
+#f_top .callcenter .txt {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+#f_top .callcenter .appmn {
+    
+}
+#f_top .callcenter .appmn > li {
+    /* margin-top: 5px; */
+    margin-right: 8px;
+    float: left;
+    width: 110px;
+    height: 70px;
+    border: 1px solid #ccc;
+}
+#f_top .callcenter .appmn > li:nth-child(1) {
+    background-image: url(../images/appstore.jpg);
+}
+#f_top .callcenter .appmn > li:nth-child(2) {
+    background-image: url(../images/appstore1.jpg);
+}
+
+
+
+#f_bottom {
+    
+    border-top: 3px solid #000;
+    width: 100%;
+    height: 150px;
+}
+#f_bottom .button {
+    float: left;
+    display: inline-block;
+    width: 80px;
+    height: 100px;
+    margin-right: 20px;
+}
+#f_bottom .infomn {
+    margin-top: 20px;
+    width: 100%;
+    height: 25px;
+}
+#f_bottom .infomn li {
+    float: left;
+}
+#f_bottom .infomn li:after {
+    display: inline-block;
+    content: '/';
+    font-size: 10px;
+    padding: 0 10px;
+    position: relative;
+    top: -2.5px;
+}
+#f_bottom .infomn li:last-child:after {
+    content: ' ';
+    padding: 0 0;
+}
+#f_bottom .infomn li a {
+    font-size: 13px;
+    color: #000;
+    border: 1ch;
+}
+#f_bottom .add {
+    float: left;
+}
+#f_bottom .add address {
+    font-style: normal;
+}
+
+#f_bottom > div {
+    margin: 0 auto;
+    width: 1000px;
+    height: 150px;
+    
+}
+
+
