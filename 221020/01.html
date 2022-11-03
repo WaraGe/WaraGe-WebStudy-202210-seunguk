@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 요점정리</title>
+    <style>
+        .txt1 {
+            /* 문단태그 */
+            font-size: 20px;
+            /* line-height: 30px; */
+            /* line-height: 125%; */
+            /* 100%는 지정된 글자 크기 */
+            line-height: 2;
+            /* 1.2 = 120% */
+        }
+        .txt1-1{ /* 밑줄 강조 */
+            text-decoration: underline;
+            text-decoration-color: red; /*밑줄 색 변경*/
+            text-decoration-style: dotted ;/*점선 으로 변경*/
+        } 
+        .txt1-2{
+            text-decoration: overline;
+            text-decoration-color: orange; /*밑줄 색 변경*/
+            text-decoration-style: double ;/*점선 으로 변경*/
+        }
+        .txt1-3{
+            text-decoration: line-through;
+            text-decoration-color: green; /*밑줄 색 변경*/
+            text-decoration-style: dashed ;/*점선 으로 변경*/
+        }
+        .txt2 { 
+            /* 들여쓰기 */
+            /* text-indent: -100px; */
+            text-indent: 50%;
+        }
+        .txt3 {
+            /* 글자의 가로정렬 */
+            width: 500px;
+            height: 200px;
+            background-color: yellowgreen;
+            text-align: center; /*left는 지정을 안해줘도 기본값 왼쪽정렬*/
+            /* line-height: 200px;  세로정렬 */
+        }
+        .txt4 {
+            /* letter-spacing: 30px; 한글자한글자씩 간격 */
+            /* letter-spacing: 1em; */
+            /* 글자는 %가 적용이 안됨 1em 현제 body의 글자크기 16px의 100% */
+            word-spacing: 30px;
+        }
+        .btn{text-decoration: none;} /*버튼 태그에 밑줄이 없어짐*/
+
+        .front01 {/*첫문자만 대문자*/
+                text-transform: capitalize;
+        }
+        .front02 {/*전체 소문자*/
+                text-transform: lowercase;
+        }
+        .front03 { /*아무 변화 없음*/
+                text-transform: none;
+        }
+        .front04 {/*전체 대문자*/
+                text-transform: uppercase;
+        }
+    </style>
+    
+</head>
+
+<body style="height: 5000px;">
+    <p class="txt1">
+        <span class="txt1-1">문단태그입니다.</span><br>
+        <span class="txt1-2">문단태그입니다.</span><br>
+        <span class="txt1-3">문단태그입니다.</span><br>
+        문단태그입니다.<br>
+        문단태그입니다.<br>
+        문단태그입니다.<br>
+    </p>
+    <p class="txt2">들여쓰기, 문단태그 입니다.</p><br>
+    <p class="txt3">글자 가로 정렬</p><br>
+    <p class="txt4">단어와단어사이의간격또는한자한자간격</p>
+    <p> <a href="#" class="btn">네이버로 바로가기</a> </p>
+
+    <br><br><br><br>
+
+    <p class="front01">frontend</p>
+    <p class="front02">frontend</p>
+    <p class="front03">frontend</p>
+    <p class="front04">frontend</p>
+</body>
+
+</html>
