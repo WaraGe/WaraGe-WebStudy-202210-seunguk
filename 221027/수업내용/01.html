@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form문</title>
+    <style>
+        input {
+            border: 1px solid #ccc;
+            background-color: wheat;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body style="height: 3000px;">
+    <!-- form문에 methoud="post" => 데이터 방식  
+                           "get" => 서버주소, 변수명, 값데이터 
+                           action ="./txt.php" php확장자를 열때 -->
+    <form method="post" action="./text.php"><!-- input태그를 묶어주는 그룹태그 -->
+        <p>
+            <!-- input태그는 단독태그 -->
+            <!-- 
+                type="text" = 텍스트박스, 
+                size = 15자까지 
+                maxlength = 최대10자까지 
+                placeholder = 박스안에 텍스트를 넣기전, 텍스트나오게하기
+                type = "password" = 비밀번호 칸
+                type = "radio" = 동그라미 체크
+                ** radio에 name태그를 같은곳에 두면 그중에 하나만 선택이 가능 **
+                label로 묶은이유 : 텍스트를 눌렸을때도 체크가 가능하게 하기 위해
+                
+                select option > value =  db에 저장되는 값
+                textarea col rows 30x10 텍스트박스
+
+                input type="file" => 파일업로드 창
+
+                input type="submit" value="전송" => 버튼 value(전송)값 출력 (전송이 되는건 아님)
+                input type="reset" value="리셋(재작성)" => 버튼을 클릭하면 페이지 초기화(f5)
+                input type="button" value="클릭" onclick=" alert('클릭되었습니다')" => 버튼을 생성하여 alert()속성을 사용해 '클릭되었습니다' 출력
+
+                <button>버튼태그</button> => a태그를 나중에는 사용하지 않아서 사용 js에서는 사용을 잘 안하려고 함.
+                a태그는 어디론가 가려고 하기때문.
+                -->
+            아이디: <input type="text" size="15" maxlength="12" placeholder="ID를 입력하세요"/>
+        </p>
+        <p>
+            비밀번호: <input type="password" size="20" maxlength="10" placeholder="PASSWORD를 입력하세요"/> 
+        </p>
+        <p>
+            <!-- 성별: <label for="man">남자</label><input type="radio" name="man"> 
+                  <label for="woman">여자</label><input type="radio" name="woman"> -->
+            성별: <label>남자<input type="radio" name="gender"> </label>
+                  <label>여자<input type="radio" name="gender"></label>
+        </p>
+        <p>취미:
+            <label>드라이브<input type="checkbox" name="hobby"></label>
+            <label>영화감상<input type="checkbox" name="hobby"></label>
+            <label>게임<input type="checkbox" name="hobby"></label>
+            <label>등산<input type="checkbox" name="hobby"></label>
+        </p>
+        <p>
+            직업 : 
+            <select>
+                <option value="">선택하세요</option>
+                <option value="학생">학생</option>
+                <option value="컴퓨터/인터넷">컴퓨터/인터넷</option>
+                <option value="언론">언론</option>
+                <option value="공무원">공무원</option>
+                <option value="서비스업">서비스업</option>
+                <option value="의료">의료</option>
+                <option value="기타">기타</option>
+            </select>
+        </p>
+        <p>
+            <textarea cols="30" rows="10"></textarea>
+        </p>
+        <p> 사진: 
+            <input type="file">
+        </p>
+        <p>
+            <input type="submit" value="전송" />
+            <input type="reset" value="리셋(재작성)" />
+            <input type="button" value="클릭" onclick="alert('클릭되었습니다')" />
+            <button>버튼태그</button>
+        </p>
+    </form>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br>
+    <a href="#"> 버튼태그 </a>
+</body>
+
+</html>
