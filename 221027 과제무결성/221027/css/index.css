@@ -1,0 +1,569 @@
+/* =================상단부분===================== */
+#warp{
+    width: 100%;
+}
+
+#header{
+    width: 100%;
+    height: 100px;
+}
+#header_in{
+    margin: 0 auto;
+    width: 1180px;
+    height: 100px;
+    position: relative;
+}
+#header_in  .logo{
+    float: left;
+    width: 270px;
+    height: 100px;
+    text-align: left;
+    line-height: 100px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    /* 패딩을 적용했을때 요소의 크기안에 적용 */
+}
+#header_in .nav {
+    float: left;
+    margin: 35px 0 0 0;
+}
+#header_in .nav li{
+    float: left;
+    margin-right: 40px;
+}
+/* first-child는 li 태그중에 첫번째 */
+#header_in .nav li:first-child{
+    
+}
+/* li:nth-child(n)는 li태그중에 n번째 */
+#header_in .nav li:nth-child(3){
+    
+}
+/* last-child는 li 태그중에 마지막번째 */
+#header_in .nav li:last-child{
+    margin-right: 0px;
+}
+
+#header_in .nav li a{
+    font-size: 18px;
+    color: #000;
+}
+
+#header_in .infomn {
+    float: right;
+    margin-top: 24px;
+}
+
+#header_in .infomn li {
+    float: left;
+    margin-right: 12px;
+    padding-right: 12px;
+    border-right: 1px solid #333;
+    line-height: 12px;
+}
+
+#header_in .infomn li:last-child{
+    margin-right: 0px;
+    padding-right: 0px;
+    border-right: 0px;
+}
+
+#header_in .infomn a { /* li은 생략할수있다 */
+    color: rgb(38, 38, 38);
+    font-size: 12px;
+}
+
+#header_in .search_input {
+    position: absolute;
+    top: 49px;
+    right: 0px;
+    width: 235px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+#header_in .search_input a {
+    float: right;
+}
+
+/* =================내용부분===================== */
+#advice{
+    width: 100%;
+    height: 800px;
+    background-image: url(../images/bg_main_sect1.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+#advice_h{
+    margin: 0 auto;
+    width: 1180px;
+    height: 260px;
+}
+#advice_h .sub_ttl {
+    padding-top: 60px;
+    text-align: center;
+}
+
+#advice_h .line{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 50px;
+    height: 5px;
+    background-color: blue;
+}
+
+#advice_h .txt{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#advice_b{
+    margin: 0 auto;
+    width: 1180px;
+    height: 540px;
+}
+#advice_b .sub_img{
+    width: 460px;
+    height: 500px;
+    border-radius: 5px;
+    overflow: hidden;
+    float: left;
+}
+#advice_b .group {
+    float: right;
+    width: 710px;
+    height: 500px;
+}
+#advice_b .list h5 {
+    font-size: 28px;
+    color: #fff;
+    padding: 35px 0 15px 0;
+}
+
+#advice_b .list img  {
+}
+
+
+#advice_b .list p {
+    padding-top: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+#advice_b .list {
+    width: 100%;
+    height: 260px;
+}
+
+#advice_b .list li {
+    float: left;
+    width: 230px; /* 230 230 230 */
+    height: 260px;
+    margin-right: 10px;
+    background-color: rgb(74, 51, 225);
+    border-radius: 3px;
+    overflow: hidden;
+    text-align: center;
+}
+#advice_b .list li:last-child {
+    margin-right: 0px;
+}
+#advice_b .question {
+    margin-top: 10px;
+    width: 710px;
+    height: 230px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#advice_b .question_h{
+    width: 100%;
+    height: 50px;
+    background-color: #ccc;
+}
+#advice_b .ttl{
+    margin-left: 25px;
+    float: left;
+    font-size: 16px;
+    color: #fff;
+    line-height: 50px;
+}
+#advice_b .question_h .info{
+    margin-right: 25px;
+    float: right;
+    font-size: 16px;
+    color: #fff;
+    line-height: 50px;
+}
+/* "> a" 는 info 안에있는 자식 a를 지정된다 */
+#advice_b .question_h .info > a{
+    font-size: 16px;
+    color: #fff;
+}
+#advice_b .q_list {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 675px;
+}
+
+#advice_b .q_list li {
+    float: left;
+    width: 135px;
+    text-align: center;
+}
+#advice_b .q_list p {
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+#search{
+    width: 100%;
+    height: 800px;
+    background: url(../images/bg_main_sect2.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+#search_h{
+    margin: 0 auto;
+    margin-bottom: 35px;
+    width: 1180px;
+    height: 260px;
+}
+#search_h .sub_ttl {
+    padding-top: 60px;
+    text-align: center;
+}
+#search_h .line{
+    margin: 25px auto;
+    width: 50px;
+    height: 3px;
+    background-color: skyblue;
+}
+#search_h .txt {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-align: center;
+    
+    
+    margin: 0 0 55px 0;
+}
+
+
+#search_b{
+    margin: 0 auto;
+    width: 1180px;
+    height: 540px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#search_b .button {
+    float: left; 
+    width: 710px;
+    height: 230px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#search_b .button > h4 {
+    margin: 40px 0 0 30px;
+    font-size: 16px;
+}
+#search_b .button .button_l {
+    margin: 20px 0 0 30px;
+    width: 185px;
+    height: 45px;
+}
+
+#search_b .button .button_r {
+    margin: 20px 0 0 0;
+    width: 185px;
+    height: 45px;
+}
+#search_b .button > p {
+    display: inline;
+    color: #ccc;
+    font-size: 27px;
+    margin: auto 12px;
+    
+}
+#search_b .button .search_b {
+    margin-left: 12px;
+    width: 145px;
+    height: 46px;
+    color: #f1f1f1;
+    background-color: orangered;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+#search_b .button .button_h  {
+    width: 710px;
+    height: 50px;
+    background-color: #333;
+}
+#search_b .button .button_h .txt {
+    font-size: 15px;
+    padding-top: 15px;
+    margin: 0 0 0 20px;
+    color: #f1f1f1;
+    
+}
+#search_b .r_img {
+    float: right;
+    width: 460px;
+    height: 500px;
+}
+
+#search_b .threepic {
+    margin: 11px auto;
+    float: left;
+    width: 710px;
+    height: 260px;
+}
+#search_b .threepic h5 {
+    font-size: 23px;
+    border: 3px;
+    color: #fff;
+    padding: 35px 0 15px 0;
+}
+
+#search_b .threepic li {
+    float: left;
+    width: 230px; /* 230 230 230 */
+    height: 260px;
+    margin-right: 10px;
+    background-color: rgb(74, 51, 225);
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+#search_b .threepic li:nth-child(1) {
+    background-color: greenyellow;
+}
+#search_b .threepic li:nth-child(2) {
+    background-color: green;
+}
+#search_b .threepic li:last-child {
+    background-color: aqua;
+    margin-right: 0px;
+}
+
+
+
+
+
+#news{
+    width: 100%;
+    height: 800px;
+    background: url(../images/bg_main_sect3.jpg) no-repeat 50% 0;
+}
+#news_h{
+    margin: 0 auto;
+    width: 1180px;
+    height: 260px;
+    text-align: center;
+}
+#news_h .sub_ttl {
+    padding-top: 90px;
+}
+#news_h .line{
+    margin: 25px auto;
+    width: 50px;
+    height: 3px;
+    background-color: blue;
+}
+#news_h .txt{
+    font-size: 22px;
+}
+
+#news_b{
+    margin: 0 auto;
+    width: 1180px;
+    height: 490px;
+    text-align: left;
+}
+#news_b .l_img{
+    float: left;
+    width: 380px;
+    height: 360px;
+    
+}
+#news_b .n_list {
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    /* font-size: 0px; */
+}
+
+#news_b .n_list li {
+    float: left;
+    /* display: inline-block; */
+    width: 255px;
+    height: 360px;
+    background-color: #fff(43, 1, 1);
+    margin-right: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#news_b .n_list li:last-child {
+    margin-right: 0px;
+}
+#news_b .banner_list {
+    width: 100%;
+    height: 125px;
+}
+
+#news_b .banner_list li {
+    float: left;
+    margin-right: 10px;
+    width: 380px;
+    height: 125px;
+    background-color: #f1f1f1;
+    padding: 20px 0 0 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 가로값 세로값 그림자두께값 색상값; */
+}
+#news_b .banner_list li:nth-child(1) {
+    background-image: url(../images/ico_kin.png);
+    background-repeat: no-repeat;
+    background-position: 95% 20px ;
+}
+#news_b .banner_list li:nth-child(2) {
+    background-image: url(../images/ico_dictionary.png);
+    background-repeat: no-repeat;
+    background-position: 95% 20px ;
+}
+
+#news_b .banner_list li:last-child {
+    width: 400px;
+    margin-right: 0;
+}
+#news_b .banner_list li h4 {
+    font-size: 20px;
+}
+#news_b .banner_list li p {
+    margin-top: 15px;
+    font-size: 13px;
+}
+#news_b .n_list li .img_area1 {
+    width: 100%;
+    height: 165px;
+    background: url(../images/news01.jpg) no-repeat 0 0 ;
+    background-size: 100%;
+}
+#news_b .n_list li .img_area2{
+    width: 100%;
+    height: 165px;
+    background: url(../images/news02.jpg) no-repeat 0 0 ;
+    background-size: 100%;
+}
+#news_b .n_list li .img_area3{
+    width: 100%;
+    height: 165px;
+    background: url(../images/news03.jpg) no-repeat 0 0 ;
+    background-size: 100%;
+}
+
+#news_b .n_list li .ttl {
+    font-size: 15px;
+    padding: 20px 20px 15px ;
+}
+#news_b .n_list li .txt {
+    padding: 0 20px;
+    font-size: 12px;
+    line-height: 18px;
+}
+#news_b .n_list li .date {
+    font-size: 11px;
+    padding: 0 20px;
+    padding-top: 20px;
+}
+#news_b .n_list li .date b {
+    color: red;
+}
+#news_b .banner_list li .input_box {
+    width: 90px;
+    height: 20px;
+    border: 1px solid #ccc;
+}
+#news_b .banner_list li .select_l {
+    width: 100px;
+    height: 23px;
+    border: 1px solid #ccc;
+}
+
+
+
+#board{
+    width: 100%;
+    height: 800px;
+    background-color: darkred;
+}
+#board_h{
+    margin: 0 auto;
+    width: 1180px;
+    height: 260px;
+    background-color: indigo;
+}
+#board_b{
+    margin: 0 auto;
+    width: 1180px;
+    height: 540px;
+    background-color: khaki;
+}
+#board_b .border_li {
+    float: left;
+    width: 770px;
+    height: 550px;
+}
+#board_b .border_li li {
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 380px;
+    height: 245px;
+    background-color: #000;
+}
+#board_b .border_li li:nth-child(2n) {
+    /* 2n은 2의배수 (짝수) */
+    margin-right: 0;
+}
+
+/* #board_b .border_li li:nth-child(2n) 짝수 */
+/* #board_b .border_li li:nth-child(2n-1) 홀수 */
+/* #board_b .border_li li:nth-child(even) 짝수 */
+/* #board_b .border_li li:nth-child(odd)  홀수 */
+
+#board_b .right_area {
+    float: right;
+    width: 400px;
+    height: 500px;
+    background-color: #333;
+}
+#board_b .right_area >div:first-child {
+    width: 100%;
+    height: 360px;
+    background-color: aqua;
+}
+#board_b .right_area >div:last-child {
+    margin-top: 10px;
+    width: 100%;
+    height: 130px;
+    background-color: burlywood;
+}
+
+/* =================하단부분===================== */
+#footer{
+    width: 100%;
+    height: 260px;
+    background-color: darksalmon;
+}
