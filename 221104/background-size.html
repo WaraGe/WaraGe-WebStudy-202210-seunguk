@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        backgournd-size : [x], [y]; 백그라운드 이미지의 크기를 지정한다.
+
+        [x]%, [y]%: 적용되는 요소의 크기에 비례하여 배경 이미지 적용
+        [x]px, [y]px: 절대 크기로 배경 이미지 적용
+        100%: 배경이미지가 적용된 요소의 크기에 맞춤(크기의 변화가 생기면 배경의 사이즈도 변화 생김)
+        auto: 배경이미지를 늘려 적용되는 요소 전체에 표시
+        cover: 배경 이미지를 늘려 적용되는 요소 전체에 표시
+                배경이미지 영역의 사이즈가 바뀔때 
+                :이미지의 가로,세로 크기중 작은크기를 기준으로 배경이미지의 사이즈 변화가 있음
+        contain: 배경 이미지의 가로 세로 비율을 맞춰 요소에 표시할 수 있는 최대 크기로 표시
+                배경이미지 영역의 사이즈가 바뀔때
+                : 이미지의 가로, 세로 크기중 큰크기를 기준으로 배경이지의 사이즈를 변화가 있음
+        */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            border: 2px solid #000;
+            text-align: center;
+            line-height: 1200%;
+        }
+        
+        .box1 {
+            width: 1900px;          
+            height: 800px;
+            margin-bottom: 50px;
+
+            background: url(./images/red-deer-7559423_1920.jpg) no-repeat 0 0 ;
+            background-size: 100%;
+        }
+        .box2 {
+            width: 100%;
+            height: 41.6vw;
+            /* height: 800px;      (1920/800) * 100 = 결과값vw    */
+            margin-bottom: 50px;
+
+            background: url(./images/red-deer-7559423_1920.jpg) no-repeat 0 0 ;
+            /* background-size: 100%; */
+            background-size: cover;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+</body>
+
+</html>

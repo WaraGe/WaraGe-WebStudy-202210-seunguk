@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        text-shadow: [dx] [dy] [bulr] [color]; 텍스트에 그림자를 지정
+        dx: 본체와 그림자의 가로방향 거리
+        dy: 본체와 그림자의 세로방향 거리
+        bulr: 그림자의 흐려짐 정도
+        color: 그림자의 색상
+
+        box-shadow: [dx] [dy] [bulr] [spread] [set]; 지정된 요소의 그림자를 설정함
+        dx: 그림자의 가로방향 위치
+        dy: 그림자의 세로방향 위치
+        bulr: 흐려짐 정도
+        spread: 번짐 정도
+        set: 그림자의 형태
+        *outset: 요소 바깥쪽으로 그림자가 떨어짐 (디폴트 = 기본값)
+        inset: 요소 안쪽으로 그림자가 떨어짐
+        */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            border: 2px solid #000;
+            text-align: center;
+            line-height: 300px;
+        }
+        
+        h1 {
+            font-size: 30px;
+            text-shadow: 
+            0 0 4px #ccc,
+            0 -3px 4px #ff3,
+            1px -6px 6px #fd3,
+            -1px -9px 11px #f80,
+            1px -12px 18px #f20;
+        }
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: violet;
+            margin-bottom: 30px;
+            box-shadow: 10px 10px 5px 5px gray;
+            -webkit-box-shadow: 10px 10px 5px 5px gray;
+            -moz-box-shadow: 10px 10px 5px 5px gray;
+        }
+        .box1 {
+            width: 300px;
+            height: 300px;
+            background-color: violet;
+            margin-bottom: 30px;
+            box-shadow: 0px 0px 0px 0px gray;
+            /* all을 사용하면 돌아올때도 먹힘 */
+            transition: all 0.5s;
+        }
+        .box1:hover {
+            width: 300px;
+            height: 300px;
+            background-color: violet;
+            margin-bottom: 30px;
+            box-shadow: 10px 10px 5px 5px gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>text-shadow</h1>
+    <div class="box">box</div>
+    <div class="box1">box1</div>
+</body>
+
+</html>

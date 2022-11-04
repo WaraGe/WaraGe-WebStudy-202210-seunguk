@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        outline요소의 아웃라인을 그림 border와는 별개의 속성이며
+        border를 설정하는 것과 같이 아래의 속성을 단축하여 사용할 수 있음
+
+        outline-style: 아웃라인의 형식
+        outline-color: 아웃라인의 색상
+        outline-width: 아웃라인의 두께
+        outline-offset: [d];
+
+        d: 아웃라인의 옷셋시키는 거리로 음수값도 가능함
+        */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            border: 2px solid #000;
+            text-align: center;
+            line-height: 1200%;
+        }
+        
+        .box1 {
+            width: 200px;          
+            height: 200px;
+            margin-bottom: 50px;
+            border: 5px solid #000;
+        }
+        .box2 {
+            width: 200px;          
+            height: 200px;
+            margin-bottom: 50px;
+            border: 5px solid #000;
+            /* 보더 값 바깥 선 라인 그리기 */
+            outline: 2px solid red;
+            /* outline값을 준 상태로 안쪽(-), 바깥쪽(+)으로 선 그리기 */
+            /* outline-offset: -10px; */
+            outline-offset: 10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+</body>
+
+</html>
