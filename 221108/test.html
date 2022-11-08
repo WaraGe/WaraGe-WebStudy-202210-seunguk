@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        img {
+            border: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #warp {
+            width: 100%;
+        }
+
+        /*이미지크기*/
+        .imgbox1 {
+            width: 30%;
+            height: auto;
+            border: 2px solid #000;
+        }
+        .imgbox1 img{
+            width: 100%;
+        }
+        .imgbox2 {
+            width: 40%;
+            /* 배경 이미지 넣을때 높이값을 auto로 사용하면 이미지가 안나옴 */
+            height: 260vw; /* vw 계산법 : 500 / 1920 * 100  */ 
+            border: 2px solid #000;
+            background: url(./images/main640.png) no-repeat 0 0;
+            background-size: 100%;
+        }
+
+        #header {
+            width: 100%;
+            height: 120px;
+            background-color: yellow;
+        }
+
+        #header_in {
+            margin: 0 auto;
+            width: 1300px;
+            height: 120px;
+            background-color: orange;
+        }
+
+        #header_in .mo {
+            display: none;
+        }
+        #header_in .mo .logo {
+            float: left;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            font-size: 12px;
+            
+        }
+
+        #header_in .logo {
+            float: left;
+            width: 200px;
+            height: 120px;
+            background-color: red;
+        }
+
+        #header_in .nav {
+            float: right;
+            width: 1000px;
+            height: 120px;
+            background-color: thistle;
+        }
+
+        #header_in .nav li {
+            float: left;
+            width: 200px;
+            height: 120px;
+            border-right: 2px solid #000;
+            text-align: center;
+            line-height: 120px;
+            box-sizing: border-box;
+            /*박스사이즈가 벗어나면 안됨*/
+        }
+
+        #header_in .nav li a {
+            color: #fff;
+        }
+
+        #main_img {
+            width: 100%;
+            height: 350px;
+            background-color: aqua;
+        }
+
+        #contents {
+            width: 100%;
+            padding-bottom: 30px;
+        }
+
+        #contents_in {
+            margin: 0 auto;
+            width: 1300px;
+            height: auto;
+            /*컨텐츠 값의 맞게 맞춰줌*/
+            background-color: tomato;
+            padding-top: 40px;
+        }
+
+        #contents_in .con01 {
+            width: 100%;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+
+        #contents_in .con01 h3 {
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        #contents_in .con01>div {
+            float: left;
+            width: 433px;
+            height: 170px;
+            border: 2px solid #000;
+            box-sizing: border-box;
+        }
+
+        #contents_in .con02 {
+            width: 100%;
+            height: 200px;
+            background-color: blue;
+            margin-top: 40px;
+        }
+
+        #contents_in .con02 h3 {
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        #contents_in .con02>div {
+            float: left;
+            width: 650px;
+            height: 170px;
+            border: 2px solid #000;
+            box-sizing: border-box;
+        }
+
+        #contents_in .con03 {
+            width: 100%;
+            height: 200px;
+            background-color: blueviolet;
+            margin-top: 40px;
+        }
+
+        #contents_in .con03 h3 {
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        #contents_in .con03>div {
+            float: left;
+            width: 325px;
+            height: 170px;
+            border: 2px solid #000;
+            box-sizing: border-box;
+        }
+
+        #footer {
+            width: 100%;
+            height: 200px;
+            background-color: thistle;
+        }
+
+        #footer_in {
+            margin: 0 auto;
+            width: 1300px;
+            height: 200px;
+            background-color: gray;
+        }
+
+        #footer_in .logo2 {
+            float: left;
+            width: 150px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+        #footer_in .address {
+            float: right;
+            width: 1100px;
+            height: 200px;
+            background-color: bisque;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media screen and (max-width:1300px) {
+            body {
+                margin: 0 auto;
+                width: 100%;
+                height: 120px;
+                background-color: brown;
+            }
+
+            #header {
+                width: 100%;
+                height: 120px;
+                background-color: yellow;
+            }
+
+            #header_in {
+                margin: 0 auto;
+                width: 100%;
+                height: 120px;
+                background-color: orange;
+            }
+
+            #header_in .logo {
+                float: left;
+                width: 15.3%;
+                /* 200 / 1300 */
+                height: 120px;
+                background-color: red;
+            }
+
+            #header_in .nav {
+                float: right;
+                width: 76.9%;
+                height: 120px;
+                background-color: thistle;
+            }
+
+            #header_in .nav ul {
+                width: 100%;
+            }
+
+            #header_in .nav li {
+                float: left;
+                width: 20%;
+                height: 120px;
+                border-right: 2px solid #000;
+                text-align: center;
+                line-height: 120px;
+                box-sizing: border-box;
+                /*박스사이즈가 벗어나면 안됨*/
+            }
+
+            #header_in .nav li a {
+                color: #fff;
+            }
+
+            #main_img {
+                width: 100%;
+                height: 350px;
+                background: url(./images/main1920.png) no-repeat 50% 50% ;
+                
+            }
+
+            #contents {
+                width: 100%;
+            }
+
+            #contents_in {
+                margin: 0 0;
+                width: 100%;
+                /*width값을 100%로 맞춰주면  스크롤이 없어짐*/
+                background-color: tomato;
+            }
+
+            #contents_in .con01 {
+                width: 100%;
+                height: 200px;
+                background-color: yellowgreen;
+            }
+
+            #contents_in .con01 h3 {
+                width: 100%;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+            }
+
+            #contents_in .con01>div {
+                float: left;
+                width: 33.3%;
+                height: 170px;
+                border: 2px solid #000;
+                box-sizing: border-box;
+            }
+
+            #contents_in .con02 {
+                width: 100%;
+                height: 200px;
+                background-color: blue;
+            }
+
+            #contents_in .con02 h3 {
+                width: 100%;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+            }
+
+            #contents_in .con02>div {
+                float: left;
+                width: 50%;
+                height: 170px;
+                border: 2px solid #000;
+                box-sizing: border-box;
+            }
+
+            #contents_in .con03 {
+                width: 100%;
+                height: 200px;
+                background-color: blueviolet;
+            }
+
+            #contents_in .con03 h3 {
+                width: 100%;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+            }
+
+            #contents_in .con03>div {
+                float: left;
+                margin: 0 1%;
+                width: 31.2%;
+                /*23% = 3개만 보이고 싶으면 */
+                height: 170px;
+                border: 2px solid #000;
+                box-sizing: border-box;
+            }
+
+            /* #contents_in .con03>div:nth-child(4) */
+            #contents_in .con03>div:last-child {
+                display: none;
+            }
+
+            #footer {
+                width: 100%;
+                height: 200px;
+                background-color: thistle;
+            }
+
+            #footer_in {
+                margin: 0 auto;
+                width: 100%;
+                height: 200px;
+                background-color: gray;
+            }
+
+            #footer_in .logo2 {
+                float: left;
+                width: 11.5%;
+                height: 200px;
+                background-color: yellow;
+            }
+
+            #footer_in .address {
+                float: right;
+                width: 84.6%;
+                height: 200px;
+                background-color: bisque;
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            body {
+                background-color: red;
+            }
+        }
+
+        @media screen and (max-width:480px) {
+            body {
+                background-color: blue;
+            }
+
+            #header {
+                width: 100%;
+                height: 120px;
+                background-color: yellow;
+            }
+
+            #header_in {
+                margin: 0 0;
+                width: 100%;
+                height: 120px;
+                background-color: orange;
+            }
+
+            #header_in .pc {
+                display: none;
+            }
+
+            #header_in .mo {
+                display: block;
+            }
+
+            #header_in .mo .logo {
+                float: none;
+                width: 120px;
+                /* 200 / 1300 */
+                height: 120px;
+                text-align: center;
+                line-height: 120px;
+                background-color: red;
+            }
+            #header_in .mo .all_btn {
+                float: right;
+                margin: -80px 30px 0 0 ;
+            }
+            #header_in .mo .all_btn > span {
+                display: block;
+                margin-bottom: 10px;
+                width: 50px;
+                height: 5px;
+                background-color: #fff;
+            }
+
+            #header_in .nav {
+                float: none;
+                width: 100%;
+                height: 30px;
+                background-color: thistle;
+            }
+
+            #header_in .nav ul {
+                width: 100%;
+            }
+
+            #header_in .nav li {
+                float: left;
+                width: 20%;
+                height: 30px;
+                border-right: 2px solid #000;
+                /* text-align: center; */
+                line-height: 30px;
+                box-sizing: border-box;
+                /*박스사이즈가 벗어나면 안됨*/
+            }
+
+            #header_in .nav li a {
+                color: #fff;
+            }
+
+            
+            #main_img {
+                width: 100%;
+                height: 350px;
+                background: url(./images/main640.png) no-repeat 50% 50%;
+            }
+
+
+            #contents_in .con01 {
+                width: 100%;
+                padding: 10px;
+                height: 600px;
+                /* float: left; */
+                box-sizing: border-box;
+                background-color: yellowgreen;
+            }
+
+            #contents_in .con01 h3 {
+                width: 100%;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+            }
+
+            #contents_in .con01>div {
+                float: left;
+                width: 100%;
+                height: 170px;
+                border: 2px solid #000;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+            }
+
+            #contents_in .con02 {
+                width: 100%;
+                padding: 10px;
+                height: 400px;
+                background-color: blue;
+                box-sizing: border-box;
+            }
+
+            #contents_in .con02 h3 {
+                width: 100%;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+            }
+
+            #contents_in .con02>div {
+                float: left;
+                width: 100%;
+                height: 170px;
+                border: 2px solid #000;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+            }
+
+            #contents_in .con03 {
+                width: 100%;
+                padding: 10px;
+                height: 760px;
+                background-color: violet;
+                box-sizing: border-box;
+            }
+
+            #contents_in .con03 h3 {
+                width: 100%;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+            }
+
+            #contents_in .con03>div {
+                float: left;
+                margin: 0 1%;
+                width: 100%;
+                /*23% = 3개만 보이고 싶으면 */
+                height: 170px;
+                border: 2px solid #000;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+            }
+
+            #contents_in .con03>div:last-child {
+                display: block;
+                /* margin-bottom: 10px; */
+            }
+
+            #footer {
+                width: 100%;
+                height: 200px;
+                background-color: thistle;
+            }
+
+            #footer_in {
+                margin: 0 auto;
+                width: 100%;
+                height: 200px;
+                background-color: gray;
+                padding-top: 10px;
+                box-sizing: border-box;
+            }
+
+            #footer_in .logo2 {
+                float: none;
+                margin: 0 auto;
+                margin-bottom: 10px;
+                width: 120px;
+                height: 60px;
+                background-color: yellow;
+            }
+
+            #footer_in .address {
+                float: left;
+                width: 100%;
+                height: 120px;
+                background-color: bisque;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="header_in">
+                <div class="pc">
+                    <div class="logo">
+                        <h1>로고</h1>
+                    </div>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="#">menu</a></li>
+                            <li><a href="#">menu</a></li>
+                            <li><a href="#">menu</a></li>
+                            <li><a href="#">menu</a></li>
+                            <li><a href="#">menu</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="mo">
+                    <div class="logo">
+                        <h1>모바일로고</h1>
+                    </div>
+                    <a href="" class="all_btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+
+        </header>
+        <section id="main_img">main_img</section>
+        <section id="contents">
+            <div id="contents_in">
+                <article class="con01">
+                    <h3>con1</h3>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </article>
+                <article class="con02">
+                    <h3>con2</h3>
+                    <div></div>
+                    <div></div>
+                </article>
+                <article class="con03">
+                    <h3>con3</h3>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div class="box4">4</div>
+                </article>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div id="footer_in">
+                <div class="logo2">logo2</div>
+                <address class="address">address</address>
+            </div>
+        </footer>
+
+        <div class="imgbox1">
+            <img src="./images/main640.png" alt="">
+        </div>
+        <div class="imgbox2">
+            imgbox
+        </div>
+    </div>
+
+</body>
+
+</html>
