@@ -1,0 +1,166 @@
+#wrap {
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 690px;
+    background-color: aliceblue;
+}
+
+#header {
+    width: 100%;
+    height: 140px;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+}
+
+#header_in {
+    width: 1300px;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header_in .logo {
+    width: 360px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header_in .h_right {
+    width: 700px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+#header_in .infomn {
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#header_in .infomn ul {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0 0 0;
+}
+
+#header_in .infomn li:first-child::after {
+    content: 'ㅣ';
+    position: relative;
+    top: -1.5px;
+    padding: 0 5px;
+    /*세로 가로*/
+    font-size: 14px;
+    color: aliceblue;
+}
+
+#header_in .infomn a {
+    font-size: 15px;
+    color: aliceblue;
+}
+
+#header_in .nav {
+    width: 100%;
+    height: 80px;
+}
+
+#header_in .nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#header_in .nav a {
+    font-size: 20px;
+    color: aliceblue;
+}
+
+/* 본문 내용 */
+#contents {
+    width: 100%;
+}
+
+#contents .top {
+    width: 100%;
+    height: 860px;
+    /* background-color: tomato; */
+}
+
+#contents .top_h {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    box-sizing: border-box;
+/* background-color: yellowgreen; */
+}
+
+#contents .top_b {
+
+    width: 100%;
+    height: 605px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+
+#contents .top_list {
+    position: relative;
+    top: -60px;
+    width: 1300px;
+    height: 630px;
+    background-color: aqua;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+#contents .top_list li {
+    width: 420px;
+    height: 610px;
+    background-color: yellow;
+}
+
+#contents .group {
+    width: 100%;
+    height: 480px;
+    padding-top: 75px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+#contents .sns {
+    width: 870px;
+    height: 230px;
+    background-color: burlywood;
+    margin-right: 50px;
+}
+
+#contents .news {
+    width: 380px;
+    height: 230px;
+    background-color: crimson;
+}
+
+#footer {
+    border-top: 1px solid #ccc;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+}
+
+#footer_in {
+    width: 1300px;
+    height: 220px;
+    background-color: #ccc;
+}
