@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>명시형 데이터변환</title>
+
+</head>
+
+<body>
+    <script>
+        'use strict'; // 엄격형으로 선언
+
+        /* 
+        명시작 타입 변환
+
+        Number() : 문자를 숫자로 변환
+        String() : 숫자나 불린등을 문자형으로 변환
+        Boolean() : 문자나 숫자등을 불린형으로 변환
+        Object() : 모든 자료형을 객체형으로 변환
+        parseInt() : 문자형을 int(정수)형으로 변환
+        parseFloat() : 문자형을 float(실수)형으로 변환
+        */
+        const num1 = "10";
+        const num2 = "5";
+        
+        console.log(`현재 num1의 타입: ${typeof num1}`); //문자형인지 데이터 타입 확인
+        console.log(`num1 + num2 =  ${Number(num1) + Number(num2)}`); // 문자열을 정수형으로 변경후 값 더하기
+        console.log(`현재 num1의 타입: ${typeof Number(num1)}`); // 문자열을 정수형으로 바뀐뒤 데이터 타입 확인하기
+        console.log(`num1 + num2 =  ${Number(num1 + num2)}`); // 문자열을 더하고 Number()함수로 정수형으로 변경하기
+
+
+    </script>
+</body>
+
+</html>

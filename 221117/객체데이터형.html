@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체형데이터</title>
+
+</head>
+
+<body>
+    <script>
+        'use strict'; // 엄격형으로 선언
+        // const 객체명 = {속성:'속성값', 속성:'속성값'}; //style시트랑 비슷함
+        const dog = {'name':'루시', 'age':10, 'weight':"2.5kg"};
+
+        // 객체 사용법
+        console.log(dog);
+        // 필요한 값만 표시하기 
+        console.log(dog.name);
+        console.log(dog.age);
+        console.log(dog.weight);
+        // +연산자를 이용하지 않고 필요한 값만 표시하기
+        console.log(`강아지 이름 : ${dog.name}`);
+        console.log(`강아지 나이 : ${dog.age}`);
+        console.log(`강아지 무게 : ${dog.weight}`);
+
+        // 속성값은 수정이 가능함
+        dog.weight = 5;
+        console.log(dog.weight);
+
+
+    </script>
+</body>
+
+</html>

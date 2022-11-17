@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 데이터타입 - 문자형</title>
+
+</head>
+
+<body>
+    <script>
+        'use strict'; // 엄격형으로 선언
+        const num1 = 10;
+        const num2 = 20;
+        const str1 = "이성욱";
+        const str2 = "코리아 아카데미 학원";
+        const str3 = "100";
+
+        console.log(num1);
+        console.log(num2);
+        console.log(num1 + num2); // 숫자연산
+
+        console.log(str1);
+        console.log(str2);
+        console.log(num1 + str3); // 문자연산
+
+        console.log(typeof(num1)); // type 확인하기
+        console.log(typeof(num1 + "")); // int + str = str(문자형)
+        console.log(typeof(str1)); // type 확인하기
+
+        console.log(`자바스크립트에서는 문자열을
+        쌍따옴표, 땅모포로
+        둘러싸인 문자의 집합을 의미합니다
+        ${num1}`); // ${num1} 변수의값을 출력
+
+        console.log(num1 + " + " + num2 + " = " + (num1 + num2));
+        console.log(`${num1} + ${num2} = ${num1 + num2}`); // `` 백쿼트?
+        
+    </script>
+</body>
+
+</html>

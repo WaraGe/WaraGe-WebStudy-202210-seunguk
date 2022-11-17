@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>명시형 데이터변환</title>
+
+</head>
+
+<body>
+    <script>
+        'use strict'; // 엄격형으로 선언
+
+        /* 
+            암시적 타입 변환
+
+            타입의 값을 기대하는 곳에 다른 타입의 값이 오면 자동으로 타입을 변환해서 사용
+        */  
+        const a = 10 + "문자열"; // 숫자형이랑 문자형이 더해져서 자동으로 업캐스팅이 되어 문자형
+        console.log(typeof(a));
+
+        console.log("");
+
+        const b = "3" * "5"; // js에서는 문자열의 곱이 없기 때문에 자동으로 숫자형으로 변경
+        console.log(typeof(b));
+        console.log(b);
+
+        console.log("");
+
+        const c = 10 - "문자열";   
+        console.log(typeof(c));
+        console.log(c);
+        
+    </script>
+</body>
+
+</html>
