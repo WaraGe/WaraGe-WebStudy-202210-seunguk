@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /* num1 == num2 100 = "100" => true 값 동일
+        num1 != num2
+        num1 === num2 100 == "100" => false 값과 데이터타입 동일
+        num1 !== num2 */
+        const num1 = 3;
+        const num2 = 5;
+        const str1 = "3";
+        const str2 = "abcde";
+        const str3 = "bcd";
+
+        let result = num1 > num2; // 3 > 5  => false값 출력
+        console.log(`num1 > num2 : ${result}`);
+        document.write(`num1 > num2 : ${result}<br>`);
+
+        /* 
+        ==는 '값'만 비교하고, ===는 '타입'까지 비교함
+        정수형 1과 문자열 '1'이 값은 같다고 판단하지만 타입은 다른것 처럼
+
+        !=과 !==는 타입까지 교로
+        1 != '1' = false
+        1 !== '1' = true
+        */
+
+        
+        result = str2 <= str3;
+        console.log(`str2 <= str3 : ${result}`);
+        document.write(`str2 <= str3 : ${result}<br>`);
+
+        result = num1 == str1; // 3 == "3" > true
+        console.log(`num1 == str1: ${result}`);
+        document.write(`num1 == str1: ${result}<br>`);
+
+        result = num1 === str1; // 3 ==="3" > false 문자열까지 비교
+        console.log(`num1 === str1: ${result}`);
+        document.write(`num1 === str1: ${result}<br>`);
+        
+        result = num1 != str1;
+        console.log(`num != str1 ${result}`);
+        document.write(`num != str1 ${result}<br>`);
+
+        result = num1 !== str1;
+        console.log(`num !== str1 ${result}`);
+        document.write(`num !== str1 ${result}`);
+
+    </script>
+</body>
+</html>

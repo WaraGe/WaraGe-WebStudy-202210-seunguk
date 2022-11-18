@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      alert("한번뜨는 알람으로 주문을 시작합니다.");
+      alert("P:Pizza, S:Spaghetti, R:risotto, D:Drink");
+      let menu = prompt('메뉴를 영문자를 작성하세요');
+
+      switch (menu) {
+        case "p":
+        case "P":
+          document.write('Pizza를 주문하셨습니다'); break;
+        case "s":
+        case "S":
+          document.write('Spaghetti 주문하셨습니다'); break;
+        case "r":
+        case "R":
+          document.write('risotto 주문하셨습니다'); break;
+        case "d":
+        case "D":
+          document.write('Drink 주문하셨습니다'); break;
+        default:
+          document.write("메뉴에 없습니다. 프로그램을 종료합니다.");
+          break;
+      }
+    </script>
+  </body>
+</html>

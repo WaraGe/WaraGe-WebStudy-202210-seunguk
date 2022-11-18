@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      const name = prompt("이름을 입력하세요");
+      const kor = Number(prompt("국어 성적을 입력하세요"));
+      const eng = Number(prompt("영어 성적을 입력하세요"));
+      const math = Number(prompt("수학 성적을 입력하세요"));
+
+      const total = Number(kor + eng + math);
+      const avg = Number(total / 3);
+      let grade;
+
+      // switch case 구문에는 연산자 계산이 안된다.
+      switch(avg/10) {
+        case 10:
+        case 9: 
+          grade = "A";
+          break;
+        case 8:
+          grade = "B";
+          break;
+        case 7:
+          grade = "C";
+          break;
+        case 6:
+          grade = "D";
+          break;
+        default:
+          grade = "F";
+          break;
+      }
+
+      document.write(`국어 점수 : ${kor}<br>`);
+      document.write(`영어 점수 : ${eng}<br>`);
+      document.write(`수학 점수 : ${math}<br>`);
+
+      document.write(`국영수의 성적의 합은: ${total} 입니다<br>`);
+      document.write(`성적의 평균은:  ${avg} 입니다<br>`);
+
+      document.write(`<h2>${name}</h2>`);
+      document.write(`<p>국어점수: ${kor}점`);
+      document.write(`<p>영어점수: ${eng}점`);
+      document.write(`<p>수학점수: ${math}점<br><br>`);
+
+      document.write("");
+
+      document.write(`국영수의 성적의 합은: ${total} 입니다<br>`);
+      document.write(`성적의 평균은:  ${avg} 입니다<br>`);
+      document.write(`성적의 등급은:  ${grade} 입니다<br>`);
+    </script>
+  </body>
+</html>

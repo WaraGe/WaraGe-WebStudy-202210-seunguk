@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      let A = Number(prompt("첫번째 숫자를 입력하기"));
+      let B = Number(prompt("두번째 숫자를 입력하기"));
+      let op = prompt("연산자를 입력하세요");
+      let num;
+
+      switch (op) {
+        case "+":
+          num = Number(A + B);
+          document.write(A + "와" + B + "를 더한값은" + num + "입니다");
+          break;
+        case "-":
+          num = Number(A - B);
+          document.write(A + "와" + B + "를 뺀값은" + num + "입니다");
+          break;
+        case "/":
+          num = Number(A / B);
+          document.write(A + " 와 " + B + " 를 나눈값은 " + num + " 입니다");
+          break;
+        case "*":
+          num = Number(A * B);
+          document.write(A + "와" + B + "를 곱한값은" + num + "입니다");
+          break;
+        default:
+          document.write(num + "알수 없는 값입니다. 문자열을 입력했는지 확인하세요.");
+          break;
+      }
+    </script>
+  </body>
+</html>

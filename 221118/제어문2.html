@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      const age = Number(prompt("나이를 입력하세요"));
+
+      if (age > 19) {
+        document.write("성인 입니다.");
+      } else if (age > 14) {
+        document.write("청소년 입니다.");
+      } else if (age > 6) {
+        document.write("어린이 입니다.");
+      } else {
+        document.write("유아 입니다.");
+      }
+
+      console.log("프로그램을 종료합니다");
+    </script>
+  </body>
+</html>
