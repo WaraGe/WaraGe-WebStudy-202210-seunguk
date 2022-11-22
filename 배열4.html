@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배 열</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      let arr1 = ['김사과', 20, 160.5, true];
+      console.log(arr1);
+
+      arr1.push('남자');
+      console.log(arr1);
+
+      arr1.shift(''); //첫번째 array 삭제
+      // arr1.shift('김사과');
+      console.log(arr1);
+
+      let arr2 = ['김사과', '서울', '학생'];
+
+      let arr = arr1.concat(arr2); // arr1번과 arr2번을 결합 (concat)
+      console.log(arr);
+
+      arr = arr.join(" ");
+      console.log(arr);
+
+      arr2 = arr2.join(" / ");
+      console.log(arr2);
+
+      let arr3 = ['c', 'b', 'a', 'z', 'o'];
+
+      arr3.sort(); // 순서대로 출력
+      console.log(arr3);
+
+      arr3.reverse(); // 반대로 출력
+      console.log(arr3);
+
+    </script>
+  </body>
+</html>
