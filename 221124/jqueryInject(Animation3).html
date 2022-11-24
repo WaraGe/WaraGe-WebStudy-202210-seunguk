@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery Style</title>
+    <style>
+      #box {
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        border: 2px solid black;
+      }
+    </style>
+
+    <script src="./js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".show").click(function () {
+          // 3000 = 3s
+          $("#box")
+            .stop()
+            // delay는 .stop밑에 사용해야함.
+            .delay(2000)
+            .css({ width: "100px" })
+            .animate({ width: "1000px", fontSize: "50px" }, 1000);
+        });
+        $(".hide").click(function () {
+          $("#box")
+            .stop()
+            .css({ height: "100px" })
+            .animate({ height: "1000px", fontSize: "50px" }, 1000);
+        });
+
+        // 쌍따움표 따움표를 구분해서 작성하면 변수로 작성이 가능하다.
+        // var img = '<img src="이미지경로" alt="대체글">'
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="control">
+      <input type="button" value="show" class="show" />
+      <input type="button" value="hide" class="hide" />
+    </div>
+    <div id="wrapper">
+      <div id="box">box1</div>
+    </div>
+  </body>
+</html>

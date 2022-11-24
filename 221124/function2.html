@@ -1,0 +1,65 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>function2</title>
+    </head>
+    <body>
+        <script>
+            'use strict'
+            
+            function fun1(text) {
+                console.log(`전달받은 매개변수의 값은 ${text}입니다`)
+            };
+            function fun2(start, end) {
+                let sum = 0;
+                for(let i = start; i < end+1; i++ ) {
+                    sum += i;
+                }
+                console.log(`${start}부터 ${end}까지의 합은 ${sum}입니다.`);
+            };
+            function fun3(num1=1, num2=1) { /*디폴드값을 적어놓으면 아무것도 적지 않아도 디폴드값으로 실행이되고, 값을 만약 적는다고 하면, 우선순위로 들어가서 연산이 된다*/
+                console.log(`${num1} + ${num2} = ${num1+num2}`);
+                console.log(`${num1} - ${num2} = ${num1-num2}`);
+                console.log(`${num1} * ${num2} = ${num1*num2}`);
+                console.log(`${num1} / ${num2} = ${num1/num2}`);
+            };
+            function fun4(num1, num2, ...num3) { /* 매개변수앞에 ...을 적으면 나머지값을 전송이 됨(배열이 됨) = num3*/
+                console.log(`num1의 값 : ${num1}`);
+                console.log(`num2의 값 : ${num2}`);
+                console.log(`num3의 값 : ${num3}`);
+            }
+
+            // 리스트 처럼 값만 출력
+            // function fun5(...score) {
+            //     for(let i of score) {
+            //         console.log(i);   
+            //     }
+            // }
+
+            // in문을 사용한 for문 key, value값을 각각 출력 MAP
+            function fun5(...score) {
+                for(let scorein in score) {
+                    console.log(scorein, score[scorein]);   
+                }
+            }
+            
+            fun1(10);
+            fun1(5);
+
+            fun2(1, 10);
+            fun2(10, 20);
+
+            fun3(5,3);
+            fun3();
+
+            fun4(100, 90, 40, 50, 80, 90, 30);
+
+            fun5(100, 90, 40, 50, 80, 90, 30);
+
+        </script>
+        
+    </body>
+    </html>

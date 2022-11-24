@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery Style</title>
+    <style>
+        #box {
+            margin-top: 20px;
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+        }
+    </style>
+
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 마우스 포인터로 클릭을할때 .click 사용
+            // 숨길때 .hide
+            $('.hide').click(function() {
+                // 1000 = 1s
+                $('#box').hide(500);
+                // $('#box').css({display:'none'});
+            });
+            // 보일때 .show
+            $('.show').click(function() {
+                $('#box').show(1000);
+                // $('#box').css({display:'inline-block'});
+            });
+            // 현재 show와 hide의 반대방향 숨기고 키는 버튼을 하나로 만들수 있음 .toggle
+            $('.toggle').click(function() {
+                $('#box').toggle(1000);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="control">
+        <input type="button" value="show" class="show" />
+        <input type="button" value="hide" class="hide" />
+        <input type="button" value="toggle" class="toggle" />
+    </div>
+    <div id="wrapper">
+        <div id="box">
+
+        </div>
+    </div>
+</body>
+
+</html>

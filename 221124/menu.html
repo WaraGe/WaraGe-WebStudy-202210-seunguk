@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menu Animation</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      .mainmn {
+        width: 500px;
+        height: 30px;
+        border: 1px solid black;
+      }
+      .mainmn > li {
+        float: left;
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        position: relative;
+      }
+      .submn {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        border: 1px solid #ccc;
+      }
+      .submn li {
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+      }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".submn").hide(); // 서브 메뉴 숨기기
+
+        $(".mainmn > li").click(function () {
+          // $(".submn").show();
+          // $(this).find(".submn").show();
+
+          // 가장 많이 사용
+          $(".submn").hide();
+          $(this).find(".submn").show();
+
+          // $(".submn").toggle(3000);
+          // $(this).find(".submn").toggle(1000);
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <ul class="mainmn">
+      <li>
+        <a href="#">menu</a>
+        <ul class="submn">
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">menu</a>
+        <ul class="submn">
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">menu</a>
+        <ul class="submn">
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">menu</a>
+        <ul class="submn">
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">menu</a>
+        <ul class="submn">
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

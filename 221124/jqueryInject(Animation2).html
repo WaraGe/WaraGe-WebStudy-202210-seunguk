@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery Style</title>
+    <style>
+        #box {
+            margin-top: 20px;
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+        }
+    </style>
+
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 말려 올라가는 애니메이션
+            // $('.show').click(function() {
+            //     $('#box').slideDown(500);
+            // });
+            // $('.hide').click(function() {
+            //     $('#box').slideUp(500);
+            // });
+
+            // 서서히 나타나고 서서히 줄어드는 애니메이션
+            $('.show').click(function() {
+                $('#box').fadeIn(500);
+            });
+            $('.hide').click(function() {
+                $('#box').fadeOut(500);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="control">
+        <input type="button" value="show" class="show" />
+        <input type="button" value="hide" class="hide" />
+        <input type="button" value="toggle" class="toggle" />
+    </div>
+    <div id="wrapper">
+        <div id="box">
+
+        </div>
+    </div>
+</body>
+
+</html>
