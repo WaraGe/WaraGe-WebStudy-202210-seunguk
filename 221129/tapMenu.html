@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tap Menu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .taps {
+        width: 500px;
+        height: 550px;
+        border: 1px solid #000;
+        position: relative; 
+        /* relative 기준설정 */
+      }
+      .taps ul {
+        width: 100%;
+        height: 30px;
+        border-bottom: 1px solid #000;
+      }
+      .taps ul li {
+        float: left;
+        width: 25%;
+        text-align: center;
+        line-height: 30px;
+      }
+      .taps div {
+        width: 500px;
+        height: 520px;
+        position: absolute;
+        top: 30px;
+        left: 0;
+      }
+      .taps div.box1 {
+        background-color: red;
+        z-index: 400;
+      }
+      .taps div.box2 {
+        background-color: orange;
+        z-index: 300;
+      }
+      .taps div.box3 {
+        background-color: yellow;
+        z-index: 200;
+      }
+      .taps div.box4 {
+        background-color: green;
+        z-index: 100;
+      }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.taps div').hide();
+        $('.taps div').eq(0).show(); //eq(n) n번째 선택하는방법 인덱스랑 값이 같음
+
+        $('.taps li').click(function() {
+          let i = $(this).index();
+          // console.log(i);
+          // document.write(i);
+
+          $('.taps div').hide();
+          // $('.taps div').eq(i).show();
+          // $('.taps div').eq(i).slideDown();
+          // $('.taps div').eq(i).fadeIn();
+          $('.taps div').eq(i).show(700);
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <div class="taps">
+      <ul>
+        <li>tap1</li>
+        <li>tap2</li>
+        <li>tap3</li>
+        <li>tap4</li>
+      </ul>
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+      <div class="box3">box3</div>
+      <div class="box4">box4</div>
+    </div>
+  </body>
+</html>

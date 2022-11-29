@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메뉴</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .mainmn {
+        margin: 100px;
+        width: 100px;
+
+        border: 1px solid #000;
+      }
+
+      .mainmn > li {
+        width: 100px;
+        text-align: center;
+        line-height: 30px;
+      }
+
+      .mainmn > li a {
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: silver;
+        color: #555;
+        border-bottom: 1px solid rgb(20, 18, 18);
+        transition: all 0.5s;
+      }
+
+      .submn {
+        width: 100%;
+        border: 1px solid #ccc;
+      }
+
+      .submn li {
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .submn li > a {
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: #fff;
+      }
+
+      .submn li.on > a {
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-color: yellowgreen;
+      }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".submn").hide(); //초기값 안보이게 설정
+
+        $(".mainmn>li>a").click(function () {
+          $(".submn").each(function () {
+            // $('.submn')를 순서대로 순환처리
+            //    if ($(this).show()) {
+            //         $(this).hide();
+            //     }
+            if ($(this).css("display") == "block") {
+              $(this).hide();
+            }
+          });
+          // $('.submn').hide(); // 서브 메뉴 숨김 == 전체메뉴를 숨김(메모리가 많이 잡힘)
+          // $(this).next('.submn').show();
+          // $(this).next('.submn').fadeIn();
+          $(this).next(".submn").slideDown();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <ul class="mainmn">
+      <li>
+        <a href="#">menu</a>
+        <ul class="submn">
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">menu</a>
+        <ul class="submn">
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">menu</a>
+        <ul class="submn">
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">menu</a>
+        <ul class="submn">
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">menu</a>
+        <ul class="submn">
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+          <li><a href="#">smenu</a></li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

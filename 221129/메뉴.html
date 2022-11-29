@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul,
+        li{
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .mainmn {
+            width: 500px;
+            height: 30px;
+            border: 1px solid #000;
+        }
+
+        .mainmn > li {
+            float: left;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            position: relative;
+        }
+
+        .submn {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+
+        .submn li {
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .submn li>a {
+            display: block;
+            width: 100%;
+            height: 30px;
+            background-color: #fff;
+        }
+
+        .submn li.on>a {
+            display: block;
+            width: 100%;
+            height: 30px;
+            background-color: yellowgreen;
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.submn').hide(); //서브메뉴 숨김
+
+            $('mainmn > li').hover(
+                function () {
+                    $(this).find('.submn').show();
+                    $(this).addClass('on');
+                },
+                function () {
+                    $(this).find('.submn').hide();
+                    $(this).removeClass('on');
+                }
+            )
+
+            $('.submn li').mouseover(function () {
+                // $(this).addClass('on');
+                $(this).find('.submn').slideDown();
+            });
+            $('.submn li').mouseout(function () {
+                // $(this).removeClass('on');
+                $(this).find('.submn').slideUp();
+
+            });
+        })
+    </script>
+</head>
+
+<body>
+    
+    <ul class="mainmn">
+        <li><a href="#">menu</a>
+            <ul class="submn">
+                <li><a href="#">smenu</a></li>
+                <li><a href="#">smenu</a></li>
+                <li><a href="#">smenu</a></li>
+                <li><a href="#">smenu</a></li>
+                <li><a href="#">smenu</a></li>
+            </ul>
+        </li>
+        <li><a href="#">menu</a>
+            <ul class="submn">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </li>
+        <li><a href="#">menu</a>
+            <ul class="submn">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </li>
+        <li><a href="#">menu</a>
+            <ul class="submn">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </li>
+        <li><a href="#">menu</a>
+            <ul class="submn">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

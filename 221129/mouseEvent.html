@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Event</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 대상을 누르는 순간 이벤트가 발생
+        // $('p').click(function() {
+        //   alert('클릭함');
+        // })
+
+        // 대상을 누르거나 눌렀다가 땠을때 각각이벤트 발생
+        // $('p').mousedown(function() {
+        //   $(this).after("<p style='color:red'>마우스 버튼 다운</p>")
+        // })
+
+        // $('p').mouseup(function() {
+        //   $(this).after("<p style='color:blue'>마우스 버튼 업</p>")
+        // })
+
+        // 자기자신에게 마우스를 올렸을때와 빠져나왔을때 각각 이벤트가 발생
+        // $('p').hover(
+        //   function() {
+        //     // $('p').css({color:'red'});
+        //     $('p').css("background-color", "yellow");
+        //     // jquery로 css 효과 적용 방법 $('p').css({속성:'속성값',속성:'속성값'});
+        //   },
+        //   function() {
+        //     // $('p').css({color:'blue', height:'200px'});
+        //     $('p').css("background-color", "pink");
+        // })
+        
+        // 풀다운메뉴처럼 대상을 다르게 할수있음 hover랑 비슷함
+        // $('p').mouseover( //대상1
+        //   function() {
+        //     $('p').css("background-color", "yellow");
+        //   });
+        // $('p').mouseout( //대상2
+        //   function() {
+        //     $('p').css("background-color", "pink");
+        // })
+
+        // 마우스포인트가 대상영역안에 또는 밖으로 나왔을때 이벤트가 발생
+        // $('p').mouseenter(
+        //   function() {
+        //     $('p').css("background-color", "yellow");
+        //   });
+        // $('p').mouseleave(
+        //   function() {
+        //     $('p').css("background-color", "pink");
+        // })
+
+        //   $('div').focusin(function() { // 포커스가 걸렸을때, div안에 input에 포커스가 들어갔다 나와도 적용됨
+        //     $(this).css("background-color", "yellow");
+        //   })
+
+        //   $('div').focusout(function() { // 포커스가 걸렸다가 나갈때, div안에 input이 포커스가 들어갔다 나와도 적용됨
+        //     $(this).css("background-color", "pink");
+        //   })
+
+        // 마우스를 움직일때마다 이벤트가 발생 X,Y축 받아오기
+        // $(document).mousemove(function (Event) {
+        //   $('span').text('x좌표는: '+Event.pageX + ', y좌표는: ' + Event.pageY);
+        //   // $('span').html('html형식');
+        // });
+
+        
+      });
+    </script>
+  </head>
+  <body>
+    <p><b>여기를 클릭하세요</b></p>
+
+    <div style="border: 1px solid black; padding: 10px">
+      이름: <input type="text" /><br />
+      주소: <input type="text" />
+    </div>
+
+    <p>마우스 좌표는: <span></span>.</p>
+  </body>
+</html>
