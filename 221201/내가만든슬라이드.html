@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내가만든 메인슬라이드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        #slide {
+            width: 100%;
+            height: 500px;
+            border: 2px solid black;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        #viewer ul li {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+        }
+
+        #viewer ul li:nth-child(1) {
+            left: 0;
+            background-color: silver;
+        }
+
+        #viewer ul li:nth-child(2) {
+            left: 100%;
+            background-color: gold;
+        }
+
+        #viewer ul li:nth-child(3) {
+            left: 200%;
+            background-color: blueviolet;
+        }
+
+        #viewer ul li:nth-child(4) {
+            left: 300%;
+            background-color: palevioletred;
+        }
+
+        #btns {
+            position: absolute;
+            bottom: 25px;
+        }
+
+
+        #btns> li {
+            float: left;
+            margin: 0 10px;
+            width: 15px;
+            height: 15px;
+            background-color: aqua;
+            border-radius: 50%;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        #btns> li.on {
+            background-color: red;
+        }
+
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/slide.js"></script>
+</head>
+<body>
+   <div id="slide">
+        <div id="viewer">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <ul id="btns">
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+   </div>
+    
+</body>
+</html>

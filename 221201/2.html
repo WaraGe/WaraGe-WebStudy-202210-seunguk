@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main slide</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+
+      #slide {
+        width: 100%;
+        height: 400px;
+        position: relative;
+      }
+
+      #viewer {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #viewer li {
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        top: 0;
+      }
+      #viewer li:nth-child(1) {
+        left: 0;
+        z-index: 400;
+        background-color: red;
+      }
+      #viewer li:nth-child(2) {
+        left: 0;
+        z-index: 300;
+        background-color: orange;
+      }
+      #viewer li:nth-child(3) {
+        left: 0;
+        z-index: 200;
+        background-color: yellow;
+      }
+      #viewer li:nth-child(4) {
+        left: 0;
+        z-index: 100;
+        background-color: green;
+      }
+
+      .btns {
+        position: absolute;
+        left: 50%;
+        bottom: 30px;
+        z-index: 9999;
+        margin-left: -45px;
+      }
+
+      .btns li {
+        float: left;
+        margin-right: 10px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: aqua;
+        cursor: pointer;
+      }
+      
+
+      .btns li.on {
+        background-color: red;
+      }
+
+      #btn_area {
+        width: 500px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 5px 12px;
+        background: #000;
+        color: #ccc;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            let current = 0; // 현재 화면에 보이는 슬라이드 번호 ( 인덱스 번호 )
+            let setIntervalId; // 자동실행 함수의 객체명
+            timer();
+            // 버튼에 의해 발생한 인덱스 값으로 애니메이션 작동
+            $('.btns li').click(function() {
+                let i = $(this).index();
+                movie(i);
+                // console.log(i);
+            })
+
+            //자동실행을 하는 함수를 제어하는 함수
+            $('#slide').on({
+                mouseover:function() {
+                    clearInterval(setIntervalId)
+                },
+                mouseout:function() {
+                    timer();
+                }
+            })
+
+
+
+            //자동실행을 하는 함수
+            function timer() {
+                // const 객체명 = setInterval(실행할 함수(), 시간) > 시간 간격으로 함수를 (반복) 실행
+                // clearInterval(실행함수 객체명) > setInterval 함수의 반복을 멈추게 하는방법
+                // const 객체명 = setTimeout(실행할함수(), 시간) > 시간이 지나면 함수를 (한번만) 실행
+                // clearTimeout(실행함수 객체명) > setTimeout 함수의 반복을 멈추게 하는방법
+                setIntervalId = setInterval (function() {
+                    i = current + 1; // 0 1 2 3 
+                if (i == 4) {
+                    i = 0;
+                }
+                movie(i);
+                }, 1000) //시간초   
+            }
+
+
+            //애니메이션 함수
+            function movie(n) {
+                // 동일한 버튼을 여러번 동작했을때 작동 제어하는 조건문
+                if (current == n) return;
+                
+                currentEL = $('#viewer li').eq(current); // eq(n) n번째 current 초기값 0
+                nextEL = $('#viewer li').eq(n);
+                currentEL.css({opacity:'1'}).animate({opacity:'0'});
+                nextEL.css({opacity:'0'}).animate({opacity:'1'});
+                
+                current = n;
+                $('.btns li').removeClass('on');
+                $('.btns li').eq(n).addClass('on');
+
+                
+            }
+        })
+    </script>
+  </head>
+  <body>
+    <div id="slide">
+      <div id="viewer">
+        <ul>
+          <li>img01</li>
+          <li>img02</li>
+          <li>img03</li>
+          <li>img04</li>
+        </ul>
+      </div>
+      <ul class="btns">
+        <li class="on"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>

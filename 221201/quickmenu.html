@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickMenu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul, li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            height: 5000px;
+        }
+        #q_mn {
+            position: absolute;
+            right: 20px;
+            top: 300px;
+            z-index: 9999;
+            width: 120px;
+            height: 200px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        #q_mn ul.nav {
+            margin: 0 auto;
+            margin-top: 30px;
+            list-style: none;
+            width: 50px;
+        }
+        #q_mn ul.nav li {
+            margin-bottom: 10px;
+        }
+        #q_mn ul.nav li a {
+            color: #ccc;
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+        // $(document).ready(function() {}) 줄여서 사용
+        // $(function() {})
+        $(function() {
+            $(window).scroll(
+                function() {
+                    let sct = $(window).scrollTop() + 200; // 스크롤에서 300만큼 top에서 차이를 주는것
+                    $('#q_mn').stop().animate({top:sct + "px"}, 500); // 뒷부분은 시간
+                }
+            )
+        })
+    </script>
+</head>
+<body>
+    <div id="q_mn">
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Skill</a></li>
+            <li><a href="#">project1</a></li>
+            <li><a href="#">finish</a></li>
+        </ul>
+    </div>
+</body>
+</html>

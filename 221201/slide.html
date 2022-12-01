@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, li{
+            list-style: none;
+        }
+        #slide {
+            width: 100%;
+            height: 400px;
+            position: relative;
+        }
+        #viewer {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        #viewer li {
+            width: 100%;
+            height: 400px;
+            position: absolute;
+            top: 0;
+        }
+        #viewer li:nth-child(1) {
+            left: 0;
+            z-index: 400;
+            background-color: red;
+        }
+        #viewer li:nth-child(2) {
+            left: 0;
+            z-index: 300;
+            background-color: pink;
+        }
+        #viewer li:nth-child(3) {
+            left: 0;
+            z-index: 200;
+            background-color: aqua;
+        }
+        #viewer li:nth-child(4) {
+            left: 0;
+            z-index: 100;
+            background-color: blue;
+        }
+
+        .btn {
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            z-index: 9999;
+            margin-left: -45px;
+        }
+        .btn li {
+            float: left;
+            margin-right: 10px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: whitesmoke;
+            cursor: pointer;
+        }
+        .btn li.on {
+            background-color: black;
+        }
+
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            let move1 = 0;
+            
+            $('.btn li').click(function() {
+                let i = $(this).index();
+                move(i);
+                
+            }) 
+
+            function move(n) {
+                if (move1 == n) return;
+
+                back = $('#viewer li').eq(move1);
+                next = $('#viewer li').eq(n);
+                back.css({left:'0&'}).animate({left:'-100%'});
+                next.css({left:'-100%'}).animate({left:'0&'});
+
+                move1 = n;
+                $('.btn li').removeClass('on');
+                $('.btn li').eq(n).addClass('on');
+            }
+        })
+    </script>
+</head>
+<body>
+    <div id="slide">
+        <div id="viewer">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <ul class="btn">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    
+</body>
+</html>
