@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scroll menu</title>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/scrollmenu.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 950px;
+        margin: 0 auto;
+        padding-bottom: 400px;
+      }
+
+      #top_menu {
+        width: 950px;
+        height: 114px;
+        margin: 0 auto;
+        text-align: center;
+        top: 0;
+        background-color: #545454;
+        opacity: 0.2;
+      }
+
+      #top_menu ul {
+        float: left;
+        /* margin-left: 50px; */
+      }
+
+      #top_menu ul li {
+        padding: 59px 0 0 63px;
+        float: left;
+        list-style: none;
+        color: #cccccc;
+        cursor: pointer;
+      }
+
+      #top_menu ul li.on {
+        color: #000;
+        font-weight: bold;
+      }
+
+
+      /* content */
+      
+      #contents > div {
+        width: 100%;
+        height: 800px;
+      }
+      #contents > div.con1 {
+        background-color: red;
+      }
+      #contents > div.con2 {
+        background-color: orange;
+      }
+      #contents > div.con3 {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="top_menu">
+        <ul>
+          <li>con1</li>
+          <li>con2</li>
+          <li>con3</li>
+        </ul>
+      </div>
+      <div id="contents">
+        <div class="con1">con1</div>
+        <div class="con2">con2</div>
+        <div class="con3">con3</div>
+      </div>
+    </div>
+  </body>
+</html>

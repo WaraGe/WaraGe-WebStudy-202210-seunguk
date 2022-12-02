@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>이미지 관련 caption 갤러리</title>
+<style>
+body {
+	margin: 20px auto;
+	padding: 0;
+	width: 620px;
+	background: #192839;
+}
+.thumbs {
+	float: left;
+	width: 100px;
+}
+.thumbs img {
+	margin-bottom: 3px;
+	padding: 5px;
+	border: solid 1px #ccc;
+}
+.thumbs img:hover {
+	border-color: #ef4018;
+}
+#largeImg {
+	overflow: hidden; /* 속성을 지워서 확인해 보세요. */
+	margin-left: 110px;
+	padding: 5px;
+	width: 500px;
+	height: 280px;
+	border: 1px solid #ccc;
+}
+#caption {
+	position: relative;
+	padding: 10px;
+	font-family: "나눔고딕", "맑은 고딕";
+	font-size: 12px;
+	background: url(images/captionBg.png) repeat-y;
+	color: #fff;
+	border: 1px solid #ccc;
+}
+</style>
+<script src="js/jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+<div class="thumbs">
+	<a href="images/pic1.jpg" title="image1"><img src="images/th_pic1.jpg" /></a>
+	<em>Lorem Ipsum is simply dummy text of the pdrinting and typesetting industry.</em>
+
+	<a href="images/pic2.jpg" title="image2"><img src="images/th_pic2.jpg" /></a>
+	<em>Lorem Ipsum is simply dummy tely dummy thely dummy tegxt of thely try. Sed facilisis, sem a luctus bibendum, dui risus pellentesque velit, quis tempor magna sem vel justo. Etiam eget ipsum ante.</em>
+
+	<a href="images/pic3.jpg" title="image3"><img src="images/th_pic3.jpg" /></a>
+	<em>Lorem Ipsum is simply dummy.</em>
+</div>
+<div id="largeImg"><img src="images/pic1.jpg" alt="image1" /></div>
+
+<!--
+<div id="largeImg">
+	<img src="images/pic1.jpg" alt="image1" />
+	<div id="caption">Lorem Ipsum is simply dummy.</div>
+</div>
+-->
+
+<script>
+$(".thumbs em").hide();
+var current; // 현재 클릭된 번호를 저장하는 변수입니다.(0, 2, 4)
+
+$(".thumbs a").click(function(e){
+	e.preventDefault();
+
+	// console.log("index : "+$(this).index());
+	if(current != $(this).index()){
+		current=$(this).index();
+		if($("#caption")){
+			$("#caption").remove(); // append()와 반대되는 명령어입니다.
+		}
+		var path=$(this).attr("href");
+		// console.log("path : "+path);
+		
+		if(path != $("#largeImg img").attr("src")){
+		$("#largeImg img").attr({src:path});
+		$("#largeImg img").css({opacity:0})
+		.stop()
+		.animate({opacity:1}, 1000);
+	}
+			
+		var msg=$(this).next("em").text();
+		// console.log("msg : "+msg);
+
+		$("#largeImg").append("<div id='caption'></div>"); // largeImg id에 앞 줄에서 제거되었던 <div> 태그를 추가합니다.
+		$("#largeImg #caption").text(msg);
+		// console.log("caption height : "+$("#largeImg #caption").css("height"));
+		// console.log("caption height : "+$("#largeImg #caption").height());
+
+		var posy=$("#largeImg #caption").height()+27; // padding 공간을 생각한 여유 수치입니다.
+		$("#largeImg #caption").animate({top:"-="+posy+"px"}, 300);
+	}
+});
+</script>
+</body>
+</html>

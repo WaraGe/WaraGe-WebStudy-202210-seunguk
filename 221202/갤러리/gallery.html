@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+</head>
+<body>
+    <div id="galley">
+        <div style="border: 2px solid #000;" class="btns">
+            <a href="./images/pic1.jpg"><img src="./images/th_pic1.jpg" alt=""></a>
+            <a href="./images/pic2.jpg"><img src="./images/th_pic2.jpg" alt=""></a>
+            <a href="./images/pic3.jpg"><img src="./images/th_pic3.jpg" alt=""></a>
+        </div>
+        <div id="largeImg"><img src="./images/pic1.jpg" alt="image1"></div>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.btns a').click(function(e) { 
+                e.preventDefault(); //a태그의 href이벤트 상실
+                let path = $(this).attr("href"); // 대상.attr("href(속성명)"); 해당 대상의 태그속성값을 추출
+                // 대상.attr({속성명:속성값}) 해당 대상의 속성의 속성값을 지정
+                if(path != $("#largeImg img").attr('src')) {
+                    $("#largeImg img").attr({src:path});
+                    // animation
+                    $("#largeImg img").css({opacity :0}).stop().animate({opacity:1}, 100);
+                }
+            })
+        })
+    </script>  
+</body>
+</html>
