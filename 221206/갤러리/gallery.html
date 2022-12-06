@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <style>
+        #largeImg {
+            /* position: relative; */
+        }
+        #caption {
+            position: relative;
+            width: 480px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid #ccc;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div id="galley">
+        <div style="border: 2px solid #000;" class="btns">
+            <a href="./images/pic1.jpg"><img src="./images/th_pic1.jpg" alt=""></a>
+            <em>첫번째의 이미지 설명글</em>
+            <a href="./images/pic2.jpg"><img src="./images/th_pic2.jpg" alt=""></a>
+            <em>두번째의 이미지 설명글</em>
+            <a href="./images/pic3.jpg"><img src="./images/th_pic3.jpg" alt=""></a>
+            <em>세번째의 이미지 설명글</em>
+        </div>
+        <div id="largeImg">
+            <img src="./images/pic1.jpg" alt="image1">
+        </div>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('em').hide();
+
+            $('.btns a').click(function(e) { 
+                e.preventDefault(); //a태그의 href이벤트 상실
+
+
+                if($("#caption")) {
+                    $("#caption").remove();
+                }
+
+                let path = $(this).attr("href"); // 대상.attr("href(속성명)"); 해당 대상의 태그속성값을 추출
+                // 대상.attr({속성명:속성값}) 해당 대상의 속성의 속성값을 지정
+                if(path != $("#largeImg img").attr('src')) {
+                    $("#largeImg img").attr({src:path});
+                    // animation
+                    $("#largeImg img").css({opacity :0}).stop().animate({opacity:1}, 100);
+                }
+
+                // 풍선말 추가하기(태그요소 추가) = em태그의 text(글자)를 가져온다
+                let msg = $(this).next('em').text();
+                // <em>n번째의 이미지 설명글</em>에서 글자만 추출해서 msg에 할당
+
+                // $('largerImg').append() => 현재 대상의 자식요소중에서 마지막에 추가
+                // $('largerImg').prepend() => 현재 대상의 자식요소중의 처음에 추가
+                $('#largeImg').append('<div id="caption"></div>');
+                $('#caption').text(msg);
+
+                let posy = $("#caption").height() + 25; //padding 공간을 생각한 여유 수치
+                $("#caption").animate({ top: "-=" + posy + "px"}, 300);
+                // -= 자기자신에서 자기자신을 뺄대 = posy -= posy
+            })
+        })
+    </script>  
+</body>
+</html>

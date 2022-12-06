@@ -1,0 +1,157 @@
+#wrap {
+  margin: 0 auto;
+  width: 1200px;
+  height: 700px;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+  width: 100%;
+  height: 100px;
+}
+
+#logo {
+  margin-left: 50px;
+  width: 200px;
+  height: 40px;
+  /* position: absolute; */
+}
+
+.mainmn {
+  margin-right: 100px;
+  width: 400px;
+  height: 30px;
+  border: 1px solid #000;
+}
+
+.mainmn > li {
+  float: left;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  position: relative;
+}
+
+.submn {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  z-index: 9999;
+}
+
+.submn li {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.submn li > a {
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+}
+
+.submn li.on > a {
+  display: block;
+  width: 100%;
+  height: 30px;
+}
+.submn li > a:hover {
+  background-color: #000;
+  color: #ccc;
+}
+
+#imgslide {
+  /* position: absolute; */
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  /* position: relative; */
+}
+#viewer {
+  position: relative;
+}
+
+#viewer ul li {
+  position: absolute;
+}
+
+#viewer ul li:nth-child(1) {
+  left: 0;
+}
+#viewer ul li:nth-child(2) {
+  left: 100%;
+}
+#viewer ul li:nth-child(3) {
+  left: 200%;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-around;
+
+  width: 1200px;
+  height: 200px;
+  /* background-color: green; */
+  /* display: inline-block; */
+}
+
+#menu .galley {
+  font-size: 15px;
+  width: 400px;
+  height: 200px;
+  text-align: center;
+  line-height: 40px;
+  /* background-color: blueviolet; */
+}
+#menu .banner > img {
+  width: 400px;
+  height: 200px;
+  /* background-image: url(../images/banner_img.jpg) no-repeat 0; */
+  background-size: 100%;
+  /* background-repeat: repeat; */
+  /* background-color: plum; */
+}
+#menu .quick > img {
+  width: 400px;
+  height: 200px;
+  /* background-image: url(../images/banner_img.jpg) no-repeat 0; */
+  background-size: 100%;
+  /* background-color: peachpuff; */
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  /* background-color: blue; */
+}
+
+footer .logo {
+  margin-left: 50px;
+}
+footer .copyright {
+  font-size: 12px;
+  text-align: center;
+}
+footer .sns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .sns > img {
+  margin-left: 30px;
+}
+footer .sns > img:last-child {
+  margin-right: 20px;
+}
