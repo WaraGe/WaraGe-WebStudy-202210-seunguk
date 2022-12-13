@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자</title>
+</head>
+<body>
+    <h2>생성자 프로퍼티</h2>
+    <script>
+        'use strict'
+        // 리터럴 표기법
+        // 장점: 빠르게 만듦
+        // 단점: 객체를 여러개 만들기 힘듦
+        const Car = {
+            name: '소나타',
+            color: 'black',
+            start: function() {
+                return "시동을 켭니다";
+            }
+        }
+        console.log(Car);
+        console.log(Car.name);
+        console.log(Car.color);
+        console.log(Car.start());
+
+        console.log("---------------");
+
+        // 생성자를 이용한 객체 생성
+        // 장점: 객체를 어러개 만들기 편함
+        function Dog(name, color) {
+            this.name = name;
+            this.color = color;
+            this.sleep = function() {
+                return `${this.name}가 잠을 잡니다`;
+            };
+        }
+        const Rucy = new Dog("루시","Brown");
+        console.log("강아지 이름: "+Rucy.name);
+        console.log("강아지 색상: "+Rucy.color);
+        console.log("강아지 행동: "+Rucy.sleep());
+        console.log("--------------");
+        const prince = new Dog("공주","White");
+        console.log("강아지 이름: "+prince.name);
+        console.log("강아지 색상: "+prince.color);
+        console.log("강아지 행동: "+prince.sleep());
+
+
+    </script>
+</body>
+</html>

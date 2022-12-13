@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프로퍼티</title>
+  </head>
+  <body>
+    <h2>프로퍼티</h2>
+    <script>
+      "use strict";
+      
+      const user = {
+        userId: 'apple',
+        name: '김사과',
+        gender: '여자',
+        hp: '01012345678',
+        birthday: '20001011',
+        memberId: function() {
+            return "korea" + this.hp;
+        }
+      }
+      console.log(user);
+      console.log("User ID: " + user.userId);
+      console.log("User Name: " + user.name);
+      console.log("User Gender: " + user.gender);
+      console.log("User phoneNumber: " + user.hp);
+      console.log("User Birthday: " + user.birthday); 
+      console.log("User membersId: " + user.memberId()); // 함수가 실행
+      console.log("User membersId Function: " + user.memberId); // 함수가 저장
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <h2>Class</h2>
+    <script>
+        'use strict';
+
+        const Dog = class {
+            constructor(name, age,  color) { // 구조 선언
+            this.name = name;
+            this.age = age;
+            this.color = color;
+            this.family = '포메라니안';
+        }
+            play() {
+                return `${this.name}가 즐겁게 놉니다`;
+            };
+        }
+        
+
+        const prince = new Dog("공주",10, "흰색");
+        console.log("강아지 이름: "+prince.name);
+        console.log("강아지 나이: "+prince.age);
+        console.log("강아지 색상: "+prince.color);
+        console.log("강아지 종류: "+prince.family);
+        console.log("강아지 행동: "+prince.play());
+
+        prince.age = 11;
+        console.log("나이를 변경한 결과: "+prince.age);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>노드 추가</title>
+  </head>
+  <body>
+    <h2>노드의 추가</h2>
+    <p id="item1" class="list">Java Script</p>
+    <p id="item2" class="list">PHP</p>
+    <hr />
+    <div id="list">
+      <p id="js" class="list">node.js</p>
+    </div>
+    <hr />
+    <p id="text">지금 시간은 매주 화 ,목 ,금  4시 50분입니다</p>
+
+    <button onclick="appendNode()">노드 추가1</button>
+    <button onclick="insertNode()">노드 추가2</button>
+    <button onclick="appendText()">텍스트 추가</button>
+
+    <script>
+      "use strict";
+      
+      //노드추가1
+      const appendNode = function () {
+        const parent = document.getElementById("list"); //이름이기 때문에 문자열로 넣어줘야 함
+        const newItem = document.getElementById("item1");
+        parent.appendChild(newItem);
+        // 대상요소.추가메소드('추가할 요소')
+      };
+
+      //노드추가2
+      const insertNode = function () {
+        const parent = document.getElementById("list");
+        const newItem = document.getElementById("item2");
+        //추가할 위치에 기준요소
+        const js = document.getElementById("js");
+
+        parent.insertBefore(newItem, js);
+        // 대상요소.추가메소드(추가할 요소, 추가할 요소의 위치를 기준으로 할 요소)
+      };
+
+      //텍스트 노드 추가
+      const appendText = function () {
+        const text = document.getElementById('text').firstChild;
+        text.insertData(7, "아주 잠이 오는 시간"); //대상.글자노드추가메소드(들어갈 위치, 추가될 텍스트) 배열과 똑같음
+        
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>노드 선택</title>
+  </head>
+  <body>
+    <h2>노드의 선택</h2>
+    <script>
+      "use strict";
+        // const id = document.getElementById('item1')
+        // console.log(id) // object > 유일한 한개
+        // const button = document.getElementsByTagName('button');
+        // console.log(button); // list > 여러개
+        // const list = document.getElementsByClassName('list');
+        // console.log(list);
+
+        // 아이디 선택자 처럼 오브젝트
+        const js = document.querySelector('#js');
+        console.log(js);
+
+        // 클래스 선택자나 태그이름으로 리스트형으로 선택
+        const p = document.querySelectorAll('p');
+        console.log(p);
+    </script>
+  </body>
+</html>
