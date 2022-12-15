@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+    <h3>Math 객체</h3>
+    <script>
+        'use strict'
+        console.log("======= Math max,min =======");
+        // min() : 최소값을 리턴, 매개변수가 전달되지 않으면 Infinity를 리턴,
+        // 비교할 수 없는 값이 포함되어 있으면 NaN을 리턴
+        // max() : 최대값을 리턴, 매개변수가 전달되지 않으면 -Infinity를 리턴,
+        // 비교할 수 없는 값이 포함되어 있으면 NaN을 리턴
+        console.log(Math.min());
+        console.log(Math.max());
+        console.log(Math.min(1, 10, -10, 1000, 0));
+        console.log(Math.max(1, 10, -10, 1000, 0));
+        console.log(Math.min(1, 10, "-10", 1000, 0)); // 비교할때 문자열이라도 min, max도 숫자로 표현이 되어 있다면, 숫자로 인식
+        console.log(Math.min(1, 10, -10, "천", 0)); 
+        // 비교할때 문자열이라도 min, max도 숫자로 표현이 되어 있다면, 숫자로 인식 하지만, 비교대상에 문자열이 NaN(표현할수 없는값)으로 표현
+
+        console.log("======== Math round ========");
+
+        // round() : 소수점 첫번째 자리에서 반올림하여 리턴
+        console.log(Math.round(10.49)); // 10
+        console.log(Math.round(10.5)); // 11
+        console.log(Math.round(-10.5)); // -10
+        console.log(Math.round(-10.51)); // -11
+
+        console.log("======== Math floor ========");
+
+        // floor() : 소수점 첫번째 자리에서 내림
+        console.log(Math.floor(10.49)); // 10
+        console.log(Math.floor(10.5)); // 10
+        console.log(Math.floor(-10.5)); // -11
+        console.log(Math.floor(-10.51)); // -11
+
+        console.log("======== Math ceil ========");
+
+        // ceil() : 소수점 첫번째 자리에서 올림
+        console.log(Math.ceil(10.49)); // 11
+        console.log(Math.ceil(10.5)); // 11
+        console.log(Math.ceil(-10.5)); // -10
+        console.log(Math.ceil(-10.51)); // -10
+
+        console.log("======== Math random ========");
+
+        // random() : 0보다 크거나 같고 1보다 작은 무작위 소수를 리턴
+        // math.random() -> 0 ~ 0.999에서의 랜덤 
+        console.log(Math.random());
+        console.log(Math.random() * 10);
+        console.log(Math.floor(Math.random() * 10)); // 소수점자리 없애는 방법 Math.이 붙는다고해서 생략을 하면 안됨 (0 ~ 9 값출력)
+        console.log(Math.floor(Math.random() * 10) + 1); // 1 ~ 9까지의 값만 출력
+
+        console.log("----------------------")
+        // 0 ~ 599999......
+        console.log(Math.random() * 6);
+        // 1 ~ 6
+        console.log(Math.floor(Math.random() * 6) + 1);
+    </script>
+</body>
+</html>

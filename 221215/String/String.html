@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <h3>String 객체</h3>
+    <script>
+        'use strict'
+        const str1 = "안녕하세요. JavaScript";
+        console.log("전체 문장의 길이" + str1.length);
+
+        console.log("===========");
+        
+        // 지정된 단어로 위치값 추출
+        console.log("문자J의 위치: "+ str1.indexOf('J')); // 7
+        console.log("문자열Java의 위치: "+str1.indexOf('Java')); // 7
+        console.log("문자열Java의 위치: "+str1.indexOf('java')); // -1 대소문자를 구별 -> 찾지 못한경우 -1를 리턴
+        console.log("문자a 앞에서 찾은 위치: "+str1.indexOf('a')); // 8 앞에서 탐색
+        console.log("문자a 뒤에서 찾은 위치: "+str1.lastIndexOf('a')); // 10 뒤에서 탐색
+
+        // 위치값 글자를 추출
+        console.log(str1.charAt(7)); // J
+
+        console.log(str1.includes('Java')) // true 값이 있으므로 
+        console.log(str1.includes('java')) // 값이 없으므로 false
+
+
+        
+    </script>
+</body>
+</html>

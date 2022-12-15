@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .container {
+            margin: 100px;
+        }
+        .ball {
+            width: 30px;
+            height: 30px;
+            background-color: plum;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.5s; 
+            /* js에서는 transition을 줄 수 없음 */
+        }
+        .effect {
+            transform: scale(2);
+            /* height: 500px; */
+        }
+    </style>
+    <script>
+        // $(document).ready(function() {}) 이방법은 옛날 방법으로 밑에 방식으로 사용한다. load = ready
+        window.addEventListener('load', function() {
+            const container = document.getElementsByClassName('container')[0]; // class는 객체 선택할때 list로 받아오기때문에 뒤에 리스트를 1개만 선택한다로 [0]으로 지정
+            // const ball = document.getElementsByClassName('ball')[0]; // 명확하게 확인하기 위해서 정확하게 찍어줘야 함
+            const ball = container.children[0]; // 선택된 객체의 자식요소(하나밖에 없기때문에 인덱스값 뒤에 ball을 출력하게 됨)
+            console.log(container);
+            console.log(ball);
+
+            ball.addEventListener('mouseenter', function(e) {
+                //자기자신을 넣어줌
+                // 스타일 적용
+                e.target.classList.add('effect');              //classList 뒤에는 add, delete, remove 3개가 붙음
+            })
+            ball.addEventListener('mouseout', function(e) {
+                //자기자신을 넣어줌
+                // 스타일 해제
+                e.target.classList.remove('effect');              //classList 뒤에는 add, delete, remove 3개가 붙음
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>

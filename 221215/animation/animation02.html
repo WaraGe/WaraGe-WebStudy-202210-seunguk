@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <style>
+      .container {
+        margin: 100px;
+      }
+      .ball {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 30px;
+        height: 30px;
+        background-color: plum;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.5s;
+        /* js에서는 transition을 줄 수 없음 */
+      }
+    </style>
+    <script>
+      // $(document).ready(function() {}) 이방법은 옛날 방법으로 밑에 방식으로 사용한다. load = ready
+      window.addEventListener("load", function () {
+        const body = document.body;
+        const container = document.getElementsByClassName("container")[0];
+
+        const ball = container.children[0];
+
+        //좌표값 변수 선언
+        let x = ball.offsetLeft;
+        console.log("x: " + x);
+        let y = ball.offsetTop;
+        console.log("y: " + y);
+        let w = ball.offsetWidth;
+        console.log("w: " + w);
+        let h = ball.offsetHeight;
+        console.log("h: " + h);
+
+
+
+        //keydown : 키보드를 누르는 순간 이벤트 발생
+        //keyup : 키보드를 때는 순간 이벤트 발생
+        body.addEventListener("keydown", (e) => {
+
+            // if (e.keyCode == 39) { // 오른쪽 방향
+            //     x += 20;
+            // }else if (e.keyCode == 37) { // 왼쪽 방향 
+            //     x -= 20;
+            // }else if (e.keyCode == 38) { // 위쪽 방향 
+            //     y -= 20;
+            // }else if (e.keyCode == 40) {// 아래쪽 방향 
+            //     y += 20;
+            // }
+
+
+            switch(e.keyCode){
+            case 39 : 
+                x += 20;
+                break;
+            case 37 : 
+                x -= 20;
+                break;  
+            case  38 : 
+                y -= 20;
+                break;  
+            case 40 : 
+                y += 20;
+                break;  
+            default :  
+                break;
+            }    
+
+            ball.style.left = x+"px";
+            ball.style.top = y+"px";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
