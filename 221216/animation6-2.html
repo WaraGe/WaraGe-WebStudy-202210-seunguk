@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation6</title>
+    <style>
+      button {
+        padding: 5px 15px;
+        background-color: #666;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.5s;
+      }
+
+      button:hover {
+        background-color: #888;
+      }
+
+      .container {
+        margin-top: 35px;
+      }
+
+      .ball {
+        position: absolute;
+        left: 40px;
+        top: 184px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: plum;
+      }
+    </style>
+    <script>
+      "use strict";
+      window.addEventListener("load", () => {
+        const queue = document.querySelector("#queue");
+        const ball = document.querySelector(".ball");
+        let x = ball.offsetLeft; // 현재 볼의 가로 좌표값
+        let target = 400; // 볼이 최종으로 갈 위치값
+
+        queue.addEventListener("click", function () {
+          animate1(ball, x, target);
+
+          function animate1(target, startx, targetx) {
+            //(대상노드, 시작점, 최종위치)
+            const timer = setInterval(function () {
+              if (startx < targetx) {
+                startx += 10;
+              } else {
+                // startx = 1;
+                startx = targetx;
+                clearInterval(timer);
+              }
+              target.style.left = startx + "px";
+            }, 10);
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <button id="queue">queue</button>
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>

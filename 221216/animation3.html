@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation3</title>
+    <style>
+      button {
+        padding: 5px 15px;
+        background-color: #666;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.5s;
+      }
+
+      button:hover {
+        background-color: #888;
+      }
+
+      .container {
+        margin-top: 35px;
+      }
+
+      .ball {
+        position: absolute;
+        left: 40px;
+        top: 184px;
+        width: 30px;
+        height: 30px;
+        background-color: #8ac007;
+        border-radius: 50%;
+        transition: all 0.3s;
+      }
+    </style>
+    <script>
+      "use strict";
+      window.addEventListener("load", () => {
+        const container = document.getElementsByClassName("container")[0];
+        // const button = container.children;
+        // const button2 = document.getElementsByTagName('button');
+        const buttonList = [];
+        let ball;
+
+        for (let i = 0; i < container.children.length; i++) {
+        //   console.log(i); // 배열 인덱스 값
+          if (container.children[i].tagName == "BUTTON") {
+            buttonList.push(container.children[i]);
+          } else if (container.children[i].tagName == "DIV") {
+            ball = container.children[i];
+          }
+        }
+        // console.log(buttonList); 
+        // console.log(ball);
+
+        let idName = ""; // 버트능ㄹ 클릭했을때 자신의 아이디값을 저장하는 공간
+        //ball의 초기 위치값
+        let x = 40;
+        let y = 184;
+
+        //버튼에 이벤트를 반복문 사용
+        for (let i = 0; i < buttonList.length; i++) {
+          buttonList[i].addEventListener("click", function (e) {
+            idName = e.target.id; //  e.target = $(this)와 같은 의미
+            // console.log("id: " + idName);
+
+            // if (idName == 'left') {
+            //     x -= 20;
+            // }else if ( idName == 'right') {
+            //     x += 20;
+            // }else if ( idName == 'top') {
+            //     y -= 20;
+            // }else if ( idName == 'bottom') {
+            //     y += 20;
+            // }
+
+            // switch문으로 변경시
+            switch(idName){
+            case 'left' : 
+                x += 20;
+                break;
+            case 'right' : 
+                x -= 20;
+                break;  
+            case  'top' : 
+                y -= 20;
+                break;  
+            case 'bottom' : 
+                y += 20;
+                break;  
+            default :  
+                break;
+            }    
+            ball.style.left = x + "px";
+            ball.style.top = y + "px";
+
+          });
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <button id="left">left</button>
+      <button id="right">right</button>
+      <button id="top">top</button>
+      <button id="bottom">bottom</button><br />
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
