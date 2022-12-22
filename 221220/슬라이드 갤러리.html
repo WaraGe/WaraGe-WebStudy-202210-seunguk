@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 갤러리</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 440px;
+            margin-top: 50px;
+        }
+
+        .controller li {
+            display: inline-block;
+            margin-left: 8px;
+        }
+
+        .controller li:first-child {
+            margin-left: 0px;
+        }
+
+        .controller li a {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .controller li.on a {
+            width: 50px;
+            background-color: aqua;
+        }
+
+        .picture {
+            position: relative;
+            margin-top: 30px;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .picture ul {
+            position: absolute;
+            width: 2400px;
+            left: 0;
+            top: 0;
+            transition: left 0.4s;
+        }
+
+        .picture li {
+            float: left;
+            width: 400px;
+            height: 400px;
+        }
+
+        .picture img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+    </style>
+    <script>
+        window.addEventListener('load', () => {
+            const container = document.getElementsByClassName('container')[0];
+            const controller = container.children[0];
+            const liList = controller.children; //배열상태
+            const picture = document.getElementsByClassName('picture')[0];
+            const pictureUl = picture.children[0];
+            let n = 0;
+            let targetX = 0;
+
+            for(let i = 0; i < liList.length; i++) {
+                liList[i].index = i; //liList의 인덱스값 설정
+
+                liList[i].addEventListener('click', (e) => {
+                    e.preventDefault();
+                    n = e.currentTarget.index; //현재 자신의 인덱스 값
+                    targetX = n * 400 * (-1);
+                    pictureUl.style.left = targetX + "px";
+
+                    for(let j = 0; j < liList.length; j++) {
+                        if(j == n) {
+                            liList[j].classList.add('on');
+                        }else {
+                            liList[j].classList.remove('on'); 
+                        }
+                    }
+
+                    /*
+                    for(let j = 0; j < liList.length; j++) {
+                        liList[j].classList.remove('on');
+                    }
+                    e.currentTarget.classList.add('on');
+                    */
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <ul class="controller">
+            <li class="on"><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </div>
+    <div class="picture">
+        <ul>
+            <li><img src="./images/work1.jpg" alt=""></li>
+            <li><img src="./images/work2.jpg" alt=""></li>
+            <li><img src="./images/work3.jpg" alt=""></li>
+            <li><img src="./images/work4.jpg" alt=""></li>
+            <li><img src="./images/work5.jpg" alt=""></li>
+            <li><img src="./images/work6.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>
