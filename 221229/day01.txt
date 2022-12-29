@@ -1,0 +1,26 @@
+nodejs
+백엔드 개발자가 사용하는 언어
+서버에서 실행되는 자바스크립트
+Google V8 JavaScript엔진을 사용하여 코드를 실행하고 기본 모듈이 자바 스크립트로 사용됨
+nodejs에는 웹서버(apache, tomcat, iis, zeus)와 같은 소프트웨어가 필요없이
+웹 서버 역할을 할 수 있는 내장 라이브러리가 있음
+
+node js 다운로드
+https://nodejs.org (LTS버전 다운)
+
+node.js 버전 확인
+com 창에서 node -v 명령어로 확인
+
+npm 버너 확인
+cmd 창에서 npm -v 명령어로 확인
+
+package.jon 파일 만들기
+경로에서 npm init을 터미널에 입력해주면 해당 경로에 설치
+모듈을 관리하는 설정 파일
+
+nodejs를 실행하기 위해 프로젝트 폴터 생성
+mpb init : 옵션을 직접 제공
+mpb init -y : 기본값을 기준으로 바로 생성
+
+nodejs 실행하는 방법
+node 파일이름
