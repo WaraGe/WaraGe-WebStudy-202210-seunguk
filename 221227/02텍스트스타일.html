@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //window.addEventListener('load',()=>{});//윈도우에 로딩이 되었을때
+        document.addEventListener('DOMContentLoaded', () => {
+            //요소를 읽어드리면
+            const header = document.querySelector('h1');
+
+            //택스트를 추가 하고 스타일 변경
+            header.textContent = 'HEADERS';//textContent는 요소에 텍스트를 입력하는 메소드
+            header.style.color = '#ffffff';
+            header.style.padding = '10px';
+            header.style.backgroundColor = "#000000";
+            //대상.스타일.스타일속성 = "속성값";
+        })
+    </script>
+</head>
+
+<body>
+    <h1></h1>
+</body>
+
+</html>

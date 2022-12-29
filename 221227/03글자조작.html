@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //window.addEventListener('load',()=>{});//윈도우에 로딩이 되었을때
+        document.addEventListener('DOMContentLoaded', () => {
+            //요소를 읽어드리면
+            const a = document.querySelector('#a');
+            const b = document.querySelector('#b');
+
+            a.textContent = '<h1>textContent 속성</h1>';
+            b.innerHTML = '<h1>textContent 속성</h1>';
+            //textContent: 입력된 문자열 그대로 입력
+            //innerHTML: 입력된 문자열을 HTML 형식으로 입력
+        })
+    </script>
+</head>
+
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //window.addEventListener('load',()=>{});//윈도우에 로딩이 되었을때
+        document.addEventListener('DOMContentLoaded', () => {//문서가 읽어드리면 실행하는 이벤트
+            const h1 = (text) => `<h1>${text}</h1>` //속성전달 peops속성
+            //태그 추가
+            document.body.innerHTML += h1('DOMContentLoaded 이벤트 발생');
+            //h1 함수호출
+            //'DOMContentLoaded 이벤트 발생'매개변수 text에 전달
+            //${text} 매개변수 text를 객체로 전달
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

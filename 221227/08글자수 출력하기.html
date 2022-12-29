@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //window.addEventListener('load',()=>{});//윈도우에 로딩이 되었을때
+        document.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.querySelector('textarea')
+            const h1 = document.querySelector('h1')
+
+            textarea.addEventListener('keyup', (e) => {
+                const length = textarea.value.length;
+                h1.textContent = `글자 수: ${length}`
+            })
+            //keyup 키보드를 눌렀다 땠을때 이벤트 발생
+            //keydown 키보드를 누르는 순간에 이벤트 발생
+            //keypress 키가 입력되었을때 실행하는 이벤트
+        })
+    </script>
+
+</head>
+
+<body>
+    <h1></h1>
+    <textarea></textarea>
+</body>
+
+</html>

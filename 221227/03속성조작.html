@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //window.addEventListener('load',()=>{});//윈도우에 로딩이 되었을때
+        document.addEventListener('DOMContentLoaded', () => {
+            //문서객체.setAttribute('속성',속성값); 객체에 속성 지정
+            //문서객체.getAttribute('속성',속성값); 객체에 속성 추출
+
+            const rects = document.querySelectorAll('.rect');
+
+            rects.forEach((rect, index) => {
+                //index는 배열 인덱스를 의미 배열요소 중복 사용 되는걸 방지
+                const width = (index + 1) * 100;
+                const src = `http://placekitten.com/${width}/250`;
+                rect.setAttribute('src', src);
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <img class="rect" />
+    <img class="rect" />
+    <img class="rect" />
+    <img class="rect" />
+</body>
+
+</html>

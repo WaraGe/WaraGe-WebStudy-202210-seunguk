@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //window.addEventListener('load',()=>{});//윈도우에 로딩이 되었을때
+        document.addEventListener('DOMContentLoaded', () => {
+            //객체 생성하기
+            const header = document.createElement('h1');
+
+            //객체 조작하기
+            header.textContent = '문서객체동적으로생성하기';
+            header.setAttribute('data-custom', '사용자 정의 속성');
+            header.style.color = 'white'
+            header.style.backgroundColor = 'black';
+
+            //h1태그를 body태그 아래에 추가하기
+            document.body.appendChild(header);
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //window.addEventListener('load',()=>{});//윈도우에 로딩이 되었을때
+        document.addEventListener('DOMContentLoaded', () => {
+            let [timerId, timer] = [0, 0];//배열방식으로 여러개의 저장공간을 선언
+            const h1 = document.querySelector('h1');
+            const checkbox = document.querySelector('input');
+
+            checkbox.addEventListener('change', (e) => {
+                if (e.currentTarget.checked) {
+                    // 체크상태
+                    timerId = setInterval(() => {
+                        timer += 1;
+                        h1.textContent = `${timer}초`
+                    }, 1000)
+                } else {
+                    // 체크해제상태
+                    clearInterval(timerId)
+                }
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <input type="checkbox">
+    <span>타이머 활성화</span>
+    <h1></h1>
+</body>
+
+</html>
