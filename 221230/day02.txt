@@ -1,0 +1,80 @@
+http 모듈
+node.js에서 가장 기본적으로 중요한 서버 모듈
+HTTP 웹 서버를 생성하는 것과 관련된 모든 기능을 담당
+
+1. server 객체
+http 모듈의 createServer() 메소드를 사용하여 server 객체를 생성
+＊메소드
+listen() : 서버를 실행하고 클라이언트를 기다립니다.
+close() : 서버를 종료합니다
+＊이벤트
+request : 클라이언트가 서버에 요청할 때 발생하는 이벤트
+connection : 클라이언트가 접속할 때 발생하는 이벤트
+close : 서버가 종료될 때 발생하는 이벤트
+
+2. request 객체
+클라이언트가 서버에게 전달하는 메세지(정보)를 담는 객체
+
+3. response 객체
+서버에서 클라이언트로 응답 메세지를 전송시켜주는 객체
+
+＊메소드
+writeHead() : 응답 헤더를 작성
+end() : 응답 본문을 작성
+
+＊속성
+mothod : 클라이언트 요청 방식을 나타냄(GET, POST)
+URL : 클라이언트가 요청할 URL을 나타냄
+
+mime
+
+http://www.blog.naver.com/zpfhfh774?userid=zpfhfh774
+←--------------------------------------------------→
+                        URI
+←-----------------------→
+        URL             
+                         ←---------→
+                           pathname      
+
+
+익스프레스 모듈
+http 모듈만 사용해서 웹 서버를 구성하면 직접 많은 기능을 개발해야 한다.
+이 문제를 해결하기 위해 만들어진 모듈이 익스프레스이다
+익스프레스 모듈을  사용하면 간단한 코드로 웹 서버의 기능을 대부분 구현할 수 있고,
+미들웨어와 라우터를 사용해서 편리하게 웹 서버를 구성할 수 있다.
+
+메소드
+use() : 미들웨어 함수를 사용
+get() : get으로 사용자 정보를 전달 받음
+set() : 서버 설정을 위한 속성을 설정
+redirect() : 웹 페이지의 경로를 강제로 이동.
+send() : 클라이언트에 응답 데이터를 보냄.
+        전달할 수 있는 데이터는 html, buffer, json, json 배열.. 등
+header() : 해더를 확인
+
+package 설치하기
+npm install 모듈명  (npm i)
+npm install(줄여서i) express
+
+package 복원
+npm install
+
+
+ex) express04.js의 const userid = req.query.userid;
+
+query : 클라이언트에서 GET방식으로 전송한 요청 파라미터를 확인
+body : 클라이언트에서 POST방식으로 전송한 요청 파라미터를 확인
+(단, post방식을 통한 요청 파라미터를 확인하려면 body-parser와 같은 모듈을 사용해야 함)
+
+Nodemon 사용
+서버 코드를 변경할때마다 서버를 재시작 하도록 하는 모듈
+
+npm install -g nodemon
+(-g 글로벌  설치)
+
+"start" : "nodemon 1_mail.js"
+
+npm start 터미널에서 실행
+
+PostMan 설치
+https://www.postman.com/downloads/
