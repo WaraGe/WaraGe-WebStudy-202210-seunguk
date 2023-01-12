@@ -1,0 +1,29 @@
+사용자 정의 모듈
+사용자가 직접 만들어 코드를 관리할 수 있도록 작성하는 모듈
+
+1 모듈 작성
+module.exports = () => {
+    모듈내의 코드
+    ...
+    ...
+}
+
+사용
+const 객체명 = require('파일명');
+
+
+2 모듈 작성
+...
+...
+module.exports = 변수;
+
+사용
+const 객체명 = require('변수명');
+
+JSON(JavaScript Object Notation)
+데이터를 교환하고 저장하기 위해 만들어진 텍스트 기반의 데이터 교환 표준
+
+객체
+{
+    "속성" : "속성값", integer
+}
