@@ -1,0 +1,25 @@
+{
+	"apple": {
+		"name": "김사과2",
+		"password": "11111"
+	},
+	"banana": {
+		"name": "bananakick",
+		"password": "22222",
+		"gender": "트렌스젠더"
+	},
+	"orange": {
+		"name": "오렌지",
+		"password": "1234",
+		"gender": "남자"
+	},
+	"melon": {
+		"name": "이메론",
+		"password": "3333",
+		"gender": "남자"
+	},
+	"solary": {
+		"name": "홍길동",
+		"password": "12345"
+	}
+}
