@@ -1,0 +1,39 @@
+웹브라우저 정보 저장 => 쿠키(cookie) 속도가 빠르고 보안이 안됨
+    cookie-parser 모듈
+    설치 방법 : npm i cookie-parser
+
+    요청된 쿠키를 쉽게 사용할 수 있도록 도와주는 모듈
+    express(req, res) 객체에 cookie를 사용할 수 있도록 기능을 부여함
+
+    cookieParser() : 일반 쿠키를  사용하는 경우
+    cookieParser('암호화하기 위한 문자') : 암호화된 쿠키를 사용하는 경우
+
+    쿠키 설정하기
+    res.cookie('키', '값', {
+        쿠키 생성 옵션
+    });
+
+    쿠키 생성 옵션
+    maxAge : 만료시간을 밀리초 단위로 설정.
+    expires : 문료 시간을 GMT 시간으로 설정.
+    path : cookie의 결로를 설정.  기본설정은 "/" 
+
+    [쿠키 조회]
+    req.cookies.cookie(키) : 일반 쿠키
+    req.signedCookies.cookie(키) : 암호화된 쿠키를
+
+    [쿠키 삭제]
+    res.clearCookie('키', {path: '경로'});
+
+
+데이터베이스 정보 저장 => 세션(session) 속도가 느리고 보안이 됨
+
+express-session 모듈
+express에서 세션을 관리하기 위해 사용하는 미들웨어 모듈
+
+app.use(session({세션 모듈의 옵션}));
+
+-> 세션 모듈의 옵션
+secret : 쿠키를 임의로 변조하는 것을 방지하기 위한 값. 이 값을 통하여 세션을 암호화 하여 저장
+resave : 세션을 언제나 저장할지 지정하는 값. 이 값을 false로 하는 것을 권장하고 필요에 따라 true로 설정해야함.
+saveUninitialized: 세션이 저장되기 전에 saveUninitialized상태로 미리 만들어서 저장
