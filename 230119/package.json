@@ -1,0 +1,18 @@
+{
+  "name": "1230",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon express05.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jade": "^0.29.0",
+    "session": "^0.1.0"
+  }
+}
