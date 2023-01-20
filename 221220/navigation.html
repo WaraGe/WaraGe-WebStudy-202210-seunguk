@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        nav>ul>li {
+            /* submenu를 기준으로 하기 위해서 */
+            position: relative;
+            float: left;
+            width: 140px;
+            height: 40px;
+            text-align: center;
+            text-transform: uppercase;
+            /* 소문자 > 대문자 */
+            font-size: 13px;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        nav>ul>li:last-child {
+            border-right: 0;
+        }
+
+        nav>ul>li>a {
+            display: block;
+            width: 100%;
+            line-height: 40px;
+            color: #666;
+            transition: background 0.4s, color 0.7s;
+        }
+
+        nav>ul>li>a.over {
+            font-weight: 600;
+            background-color: #8ac007;
+            color: #fff;
+        }
+
+        nav .sub {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 40px;
+            width: 100%;
+        }
+
+        nav .sub li {
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        nav .sub li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #666;
+            background: #fff;
+        }
+
+        nav .sub li a:hover,
+        nav .sub li a:focus {
+            background-color: #f8f8f8;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', () => {
+            const nav = document.getElementById('nav');//nav
+            const depth1Li = nav.children[0].children; //nav ul li
+
+            for (let i = 0; i < depth1Li.length; i++) {
+                depth1Li[i].addEventListener('mouseenter', (e) => {
+                    const link = e.target.children[0]; //nav ul li a
+                    link.classList.add('over');
+                    const sub = e.target.children[1];  //nav ul li .sub
+                    sub.style.display = "block";
+                });
+                depth1Li[i].addEventListener('mouseleave', (e) => {
+                    const link = e.target.children[0]; //nav ul li a
+                    link.classList.remove('over');
+                    const sub = e.target.children[1];  //nav ul li .sub
+                    sub.style.display = "none";
+                });
+
+                // 서브 메뉴 포인트 효과
+                const depth2Li = depth1Li[i].children[1].children;
+                //nav ul li .sub li
+
+                for (let j = 0; j < depth2Li.length; j++) {
+                    if (j == (depth2Li.length - 1)) { // 이전의 서브메뉴
+                        depth2Li[j].children[0].addEventListener("focusout", (e) => {
+                            var link = e.target.parentElement.parentElement.previousElementSibling;
+                            link.classList.remove("over");
+
+                            var sub = e.target.parentElement.parentElement;
+                            sub.style.display = "none";
+                        })
+                    }
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <nav id="nav">
+            <ul>
+                <li>
+                    <a href="">main1</a>
+                    <ul class="sub">
+                        <li><a href="">sub11</a></li>
+                        <li><a href="">sub12</a></li>
+                        <li><a href="">sub13</a></li>
+                        <li><a href="">sub14</a></li>
+                        <li><a href="">sub15</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">main2</a>
+                    <ul class="sub">
+                        <li><a href="">sub21</a></li>
+                        <li><a href="">sub22</a></li>
+                        <li><a href="">sub23</a></li>
+                        <li><a href="">sub24</a></li>
+                        <li><a href="">sub25</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">main3</a>
+                    <ul class="sub">
+                        <li><a href="">sub31</a></li>
+                        <li><a href="">sub32</a></li>
+                        <li><a href="">sub33</a></li>
+                        <li><a href="">sub34</a></li>
+                        <li><a href="">sub35</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">main4</a>
+                    <ul class="sub">
+                        <li><a href="">sub41</a></li>
+                        <li><a href="">sub42</a></li>
+                        <li><a href="">sub43</a></li>
+                        <li><a href="">sub44</a></li>
+                        <li><a href="">sub45</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>
