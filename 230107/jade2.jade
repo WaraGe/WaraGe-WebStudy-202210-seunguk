@@ -1,0 +1,20 @@
+html
+    head
+        title jade 테스트 입니다.
+    body 
+        #header
+            h2 사용자 아이디: #{userid}
+        #header
+            h2 사용자 이름: #{name}
+            p=desc
+        #header
+            h2 사용자 성격: #{desc}
+        hr
+        .article 
+            a(href="https://cafe.naver.com/appleiphone") 아사모 바로가기
+        hr
+        .for 
+            - for(let i = 0; i<10; i++){
+                p 
+                    a(href='http://localhost:3000/#{i}') 사이트 이동 #{i}
+            -}
