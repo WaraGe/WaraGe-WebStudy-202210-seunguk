@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "63c8f38fd1ec5393cc39e0dd"
+  },
+  "userid": "banana",
+  "userpw": "2222",
+  "username": "반하나"
+},{
+  "_id": {
+    "$oid": "63c8f394d1ec5393cc39e0de"
+  },
+  "userid": "orange",
+  "userpw": "3333",
+  "gender": "남자"
+},{
+  "_id": {
+    "$oid": "63c8f398d1ec5393cc39e0df"
+  },
+  "userid": "melon",
+  "userpw": "4444",
+  "gender": "남자",
+  "username": "이메론"
+},{
+  "_id": {
+    "$oid": "63c8f39cd1ec5393cc39e0e0"
+  },
+  "userid": "cherry",
+  "userpw": "5555",
+  "username": "채리",
+  "gender": "여자",
+  "point": 2000
+},{
+  "_id": {
+    "$oid": "63c8f3a3d1ec5393cc39e0e1"
+  },
+  "userid": "avocado",
+  "userpw": "6666",
+  "username": "안카도",
+  "gender": "남자",
+  "point": 1500
+},{
+  "_id": {
+    "$oid": "63c8f3a7d1ec5393cc39e0e2"
+  },
+  "userid": "berry",
+  "userpw": "54321",
+  "username": "이순",
+  "gender": "여자",
+  "point": 1800,
+  "age": "30"
+},{
+  "_id": {
+    "$oid": "63c8f3afd1ec5393cc39e0e3"
+  },
+  "userid": "coconut",
+  "userpw": "8888",
+  "username": "고코넛",
+  "gender": "남자",
+  "point": 1700
+},{
+  "_id": {
+    "$oid": "63c8fa54d1ec5393cc39e0e4"
+  },
+  "userid": "apple",
+  "userpw": "1111"
+}]
