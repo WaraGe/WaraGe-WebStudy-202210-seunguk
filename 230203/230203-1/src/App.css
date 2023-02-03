@@ -1,0 +1,106 @@
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: aquamarine;
+}
+
+.header_in {
+  margin: 0 auto;
+  width: 1120px;
+  height: 100px;
+  background-color: rgb(199, 233, 222);
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 180px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background-color: violet;
+}
+
+.nav {
+  margin-top: 25px;
+  width: 600px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav>li {}
+
+.info {
+  margin-top: 25px;
+  width: 180px;
+  height: 50px;
+  background-color: brown;
+}
+
+
+
+
+.main_img {
+  width: 100%;
+  height: 400px;
+  background-color: yellowgreen;
+}
+
+.contents {
+  width: 100%;
+  height: 4000px;
+  background-color: rgb(172, 173, 172);
+}
+
+.footer {
+  width: 100%;
+  height: 130px;
+  background-color: rgb(223, 233, 135);
+}
+
+/* 서브콤보넌트 전체박스 크기 설정 */
+.sub {
+  width: 100%;
+  background-color: wheat;
+  font-size: 50px;
+  text-align: center;
+}
+
+.sub_content {
+  margin: 0 auto;
+  width: 1120px;
+  height: 3000px;
+  background-color: violet;
+}
+
+.list {
+  width: 100%;
+  height: 580px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.popup_item {
+  width: 550px;
+  height: 260px;
+}
+.img_div {
+  overflow: hidden;
+  height: 187px;
+}
+.img_div img {
+  width: 100%;
+}
+
+.popup_item h4 {
+  font-size: 20px;
+}
+
+.popup_item p {
+  font-size: 10px;
+}
