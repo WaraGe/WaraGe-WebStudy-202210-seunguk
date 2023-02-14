@@ -1,0 +1,74 @@
+TodoTemplate
+투두리스트의 레이아웃을 설정하는 컴포넌트
+
+TodoHead
+오늘의 날짜, 요일을 보여주고 해야할 일이 몇 개 남았는지 보여줌
+
+TodoList
+할 일에 대한 정보가 들어있는 todos 배열을
+내장함수 map을 사용해서 여러개의 todoitem 컴포넌트를 렌더링
+
+TodoItem
+각 할 일에 대한 정보를 렌더링 해주는 컴포넌트,
+완료 여부를 toggle 할 수 있음
+할 일이 완료 됐을 때, 좌측에 체크가 나타나고 텍스트의 색상을 연하게 만듦.
+마우스를 올리면 휴지통 아이콘이 나타나고 휴지통을 누르면 삭제됨.
+
+TodoCreate
+
+
+                  App
+TodoHead        TodoList        TodoCreate
+
+                TodoItem
+
+                ConText
+
+
+
+useReducer
+상태 업데이트 로직을 분리할 때 사용
+dispatch => 이벤트(컴포넌트의 상태)
+
+배열생성
+const initialState() [
+    {  
+        id: 1,
+        text: '프론트엔드 프로젝트 만들기',
+        done: false
+    },
+    {  
+        id: 2,
+        text: '밥 잘 챙겨먹기',
+        done: true
+    },
+    {  
+        id: 3,
+        text: '운동하기',
+        done: true
+    },
+    {  
+        id: 4,
+        text: '비타민 먹기',
+        done: false
+    }
+]
+
+function reducer(state, action) {
+    //새로운 상태를 만드는 문장
+
+     //dispatch({type: 'INCREMENT'})
+     //dispatch({type: 'INCREMENT'})
+     //dispatch({type: 'INCREMENT'})
+     -------------------------------
+     {
+        type: 'INCREMENT'
+     }
+     {
+        type: 'INCREMENT'
+     }
+     ..
+}
+
+const [state, dispatch] = useReducer(reducer, initialState);
+    초기값(배열), 액션을 발생하는 함수       이벤트를 분할하는 제어문(dispatch), 배열
